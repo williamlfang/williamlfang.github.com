@@ -4,7 +4,7 @@
  <title>William Fang/title>
  <link href="http://williamlfang.github.com/atom.xml" rel="self"/>
  <link href="http://williamlfang.github.com/"/>
- <updated>2014-01-01T00:36:50+08:00</updated>
+ <updated>2014-01-01T00:53:19+08:00</updated>
  <id>http://williamlfang.github.com/</id>
  <author>
    <name>William Fang</name>
@@ -40,15 +40,16 @@
 
 &lt;p&gt;从 github 将项目 (project) 复制 (fork) 到本地磁盘中,基本格式是:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;git clone git@github.com:USERNAME/USERNAME.github.com.git TARGETED_FILE&lt;/p&gt;&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:USERNAME/USERNAME.github.com.git TARGETED_FILE
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;其中,TARGETED_FILE 通常是以 USERNAME.github.com.git 作为存放目录,比如我一般是放在 /home/william/williamlfang.github.com.&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;git clone git@github.com:williamlfang/williamlfang.github.com.git williamlfang.github.com&lt;/p&gt;&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:williamlfang/williamlfang.github.com.git williamlfang.github.com
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;em&gt;注意&lt;/em&gt; 这里我引用的是如下的模板设计:&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;git clone git@github.com:pala/pala.github.com.git&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;注意&lt;/em&gt; 这里我引用的是如下的模板设计:
+    git clone git@github.com:pala/pala.github.com.git&lt;/p&gt;
 
 &lt;p&gt;当然,对于一个 project, 也可以直接以其项目命名.&lt;/p&gt;
 

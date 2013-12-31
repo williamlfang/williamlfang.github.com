@@ -18,14 +18,14 @@ description:
 
 从 github 将项目 (project) 复制 (fork) 到本地磁盘中,基本格式是:
 
-> git clone git@github.com:USERNAME/USERNAME.github.com.git TARGETED_FILE
+    git clone git@github.com:USERNAME/USERNAME.github.com.git TARGETED_FILE
 
 其中,TARGETED_FILE 通常是以 USERNAME.github.com.git 作为存放目录,比如我一般是放在 /home/william/williamlfang.github.com. 
 
-> git clone git@github.com:williamlfang/williamlfang.github.com.git williamlfang.github.com
+    git clone git@github.com:williamlfang/williamlfang.github.com.git williamlfang.github.com
 
 *注意* 这里我引用的是如下的模板设计:
-> git clone git@github.com:pala/pala.github.com.git
+    git clone git@github.com:pala/pala.github.com.git
 
 当然,对于一个 project, 也可以直接以其项目命名.
 
