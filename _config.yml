@@ -1,0 +1,11 @@
+auto: true
+
+markdown: rdiscount
+pygments: true
+paginate: 8
+permalink: /:title
+
+title: williamlfang.com
+url: http:/williamlfang.com
+feed: /atom.xml
+author_info: <a href="http:/williamlfang.com/">Williamlfang/a>
