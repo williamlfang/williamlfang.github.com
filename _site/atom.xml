@@ -4,7 +4,7 @@
  <title>William Fang/title>
  <link href="http://williamlfang.github.com/atom.xml" rel="self"/>
  <link href="http://williamlfang.github.com/"/>
- <updated>2013-12-31T23:38:34+08:00</updated>
+ <updated>2013-12-31T23:40:39+08:00</updated>
  <id>http://williamlfang.github.com/</id>
  <author>
    <name>William Fang</name>
@@ -17,7 +17,7 @@
    <link href="http://williamlfang.github.com/2013/12/31/final-day.html"/>
    <updated>2013-12-31T00:00:00+08:00</updated>
    <id>http://williamlfang.github.com/2013/12/31/final-day</id>
-   <content type="html">&lt;h1&gt;2013年的最后一天&lt;/h1&gt;
+   <content type="html">&lt;h1&gt;{&quot;layout&quot;=&gt;&quot;post&quot;, &quot;title&quot;=&gt;&quot;2013年的最后一天&quot;, &quot;category&quot;=&gt;nil, &quot;tags&quot;=&gt;[], &quot;description&quot;=&gt;nil, &quot;url&quot;=&gt;&quot;/2013/12/31/final-day.html&quot;, &quot;date&quot;=&gt;2013-12-31 00:00:00 +0800, &quot;id&quot;=&gt;&quot;/2013/12/31/final-day&quot;, &quot;categories&quot;=&gt;[], &quot;next&quot;=&gt;&amp;lt;Post: /2013/12/31/final-day&gt;, &quot;previous&quot;=&gt;nil, &quot;content&quot;=&gt;&quot;{{ page title }}\n================\n\n&gt;唯一的乐园,是人们失去的乐园.\n\n&quot;}&lt;/h1&gt;
 
 &lt;blockquote&gt;&lt;p&gt;唯一的乐园,是人们失去的乐园.&lt;/p&gt;&lt;/blockquote&gt;
 </content>
