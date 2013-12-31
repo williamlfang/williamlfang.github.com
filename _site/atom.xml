@@ -4,13 +4,46 @@
  <title>William Fang/title>
  <link href="http://williamlfang.github.com/atom.xml" rel="self"/>
  <link href="http://williamlfang.github.com/"/>
- <updated>2013-12-31T16:38:25+08:00</updated>
+ <updated>2013-12-31T22:15:21+08:00</updated>
  <id>http://williamlfang.github.com/</id>
  <author>
    <name>William Fang</name>
    <email>william.lian.fang@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>First Blog On Github</title>
+   <link href="http://williamlfang.github.com/2013/12/31/first-blog-on-github.html"/>
+   <updated>2013-12-31T00:00:00+08:00</updated>
+   <id>http://williamlfang.github.com/2013/12/31/first-blog-on-github</id>
+   <content type="html">&lt;h1&gt;文字的诱惑&lt;/h1&gt;
+
+&lt;p&gt;下午在整理 Github 与 Jekyll 上传博客的时候,突然发现电脑的时间显示这是2013年的最后一天. 在日历的安排离,这个是一个年轮与另一个年轮交接的时刻,老的走了,新的来了.回想多年前,在南国的那段时间,每每等到这个时候,总是把门窗关闭,躲在房间写一年的总结.那时的少年,如今步入社会,身未老,心却逐渐有了倦意.时光时光,何不慢下匆匆的脚步呢.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>William</title>
+   <link href="http://williamlfang.github.com/2013/12/02/william.html"/>
+   <updated>2013-12-02T00:00:00+08:00</updated>
+   <id>http://williamlfang.github.com/2013/12/02/william</id>
+   <content type="html">&lt;h1&gt;this is a test&lt;/h1&gt;
+
+&lt;p&gt;含有中文字符就会出现上面的错误&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Text</title>
+   <link href="http://williamlfang.github.com/2013/11/12/text.html"/>
+   <updated>2013-11-12T00:00:00+08:00</updated>
+   <id>http://williamlfang.github.com/2013/11/12/text</id>
+   <content type="html">&lt;p&gt;﻿# this is another test&lt;/p&gt;
+
+&lt;p&gt;含有中文字符就会出现上面的错误&lt;/p&gt;
+</content>
+ </entry>
  
  
 </feed>
