@@ -4,7 +4,7 @@
  <title>William Fang/title>
  <link href="http://williamlfang.github.com/atom.xml" rel="self"/>
  <link href="http://williamlfang.github.com/"/>
- <updated>2014-01-01T00:24:27+08:00</updated>
+ <updated>2014-01-01T00:30:17+08:00</updated>
  <id>http://williamlfang.github.com/</id>
  <author>
    <name>William Fang</name>
@@ -24,11 +24,11 @@
  </entry>
  
  <entry>
-   <title>使用 Github + Jekyll 发表博客</title>
-   <link href="http://williamlfang.github.com/2013/12/28/%E4%BD%BF%E7%94%A8github%2Bjekyll.html"/>
+   <title>使用 Github 和 Jekyll 发表博客</title>
+   <link href="http://williamlfang.github.com/2013/12/28/github-jekyll.html"/>
    <updated>2013-12-28T00:00:00+08:00</updated>
-   <id>http://williamlfang.github.com/2013/12/28/使用github+jekyll</id>
-   <content type="html">&lt;h1&gt;使用 Github + Jekyll 发表博客&lt;/h1&gt;
+   <id>http://williamlfang.github.com/2013/12/28/github-jekyll</id>
+   <content type="html">&lt;h1&gt;使用 Github 和 Jekyll 发表博客&lt;/h1&gt;
 
 &lt;h2&gt;Linux 命令&lt;/h2&gt;
 
@@ -82,6 +82,19 @@ git remote add origin git@github.com:williamlfang/blogs.git
 git push origin master
 
 jekyll --server        # 在本地文件预览效果, 可打开: 127.0.0.1:4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以下是纯净版:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /home/william/williamlfang.github.com
+git add . -A           
+git commit -m &quot;&quot;       
+
+git remote rm origin   
+git remote add origin git@github.com:williamlfang/williamlfang.github.com.git
+git push origin master
+
+jekyll --server  
 &lt;/code&gt;&lt;/pre&gt;
 </content>
  </entry>

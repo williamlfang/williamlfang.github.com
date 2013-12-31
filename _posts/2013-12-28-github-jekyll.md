@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      使用 Github + Jekyll 发表博客
+title:      使用 Github 和 Jekyll 发表博客
 category:   
 tags: 
 description: 
@@ -62,7 +62,17 @@ description:
     
     jekyll --server        # 在本地文件预览效果, 可打开: 127.0.0.1:4000
 
+以下是纯净版:
 
+    cd /home/william/williamlfang.github.com
+    git add . -A           
+    git commit -m ""       
+    
+    git remote rm origin   
+    git remote add origin git@github.com:williamlfang/williamlfang.github.com.git
+    git push origin master
+    
+    jekyll --server  
     
 
 
