@@ -4,7 +4,7 @@
  <title>William Fang/title>
  <link href="http://williamlfang.github.com/atom.xml" rel="self"/>
  <link href="http://williamlfang.github.com/"/>
- <updated>2013-12-31T23:43:23+08:00</updated>
+ <updated>2014-01-01T00:21:18+08:00</updated>
  <id>http://williamlfang.github.com/</id>
  <author>
    <name>William Fang</name>
@@ -20,6 +20,287 @@
    <content type="html">&lt;h1&gt;2013年的最后一天&lt;/h1&gt;
 
 &lt;blockquote&gt;&lt;p&gt;唯一的乐园,是人们失去的乐园.&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>使用 Github + Jekyll 发表博客</title>
+   <link href="http://williamlfang.github.com/2013/12/28/%E4%BD%BF%E7%94%A8github%2Bjekyll.html"/>
+   <updated>2013-12-28T00:00:00+08:00</updated>
+   <id>http://williamlfang.github.com/2013/12/28/使用github+jekyll</id>
+   <content type="html">&lt;h1&gt;使用 Github + Jekyll 发表博客&lt;/h1&gt;
+
+&lt;h2&gt;Linux 命令&lt;/h2&gt;
+
+&lt;p&gt;以下是在 Linux 系统下的 bash 命令语句:&lt;/p&gt;
+
+&lt;h3&gt;复制库到本地磁盘&lt;/h3&gt;
+
+&lt;p&gt;从 github 将项目 (project) 复制 (fork) 到本地磁盘中,基本格式是:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;git clone git@github.com:USERNAME/USERNAME.github.com.git TARGETED_FILE&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;其中,TARGETED_FILE 通常是以 USERNAME.github.com.git 作为存放目录,比如我一般是放在 /home/william/williamlfang.github.com.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;git clone git@github.com:williamlfang/williamlfang.github.com.git williamlfang.github.com&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;注意&lt;/em&gt; 这里我引用的是如下的模板设计:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;git clone git@github.com:pala/pala.github.com.git&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;当然,对于一个 project, 也可以直接以其项目命名.&lt;/p&gt;
+
+&lt;h3&gt;更改项目文件&lt;/h3&gt;
+
+&lt;p&gt;对于修改的文件,如果想要将其上传到 Github 空间存储,需要经过如下几个步骤&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;------------------------------------------------------------------------------
+## williamlfang.github.com
+------------------------------------------------------------------------------
+cd /home/william/williamlfang.github.com
+git add . -A           # 上传全部文件 */
+git commit -m &quot;&quot;       #  加上注解说明有助于日后维护
+
+git remote rm origin   # 删除历史保存
+git remote add origin git@github.com:williamlfang/williamlfang.github.com.git
+                       # williamlfang.github.com
+git push origin master
+
+jekyll --server        # 在本地文件预览效果, 可打开: 127.0.0.1:4000
+
+
+------------------------------------------------------------------------------
+## williamlfang.github.com/blogs
+------------------------------------------------------------------------------
+cd /home/william/williamlfang.github.com
+git add . -A           # 上传全部文件 */
+git commit -m &quot;&quot;       #  加上注解说明有助于日后维护
+
+git remote rm origin   # 删除历史保存
+git remote add origin git@github.com:williamlfang/blogs.git
+                       # williamlfang.github.com/blogs
+git push origin master
+
+jekyll --server        # 在本地文件预览效果, 可打开: 127.0.0.1:4000
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>使用github+jekyll</title>
+   <link href="http://williamlfang.github.com/2013/12/28/%E4%BD%BF%E7%94%A8github%2Bjekyll.html"/>
+   <updated>2013-12-28T00:00:00+08:00</updated>
+   <id>http://williamlfang.github.com/2013/12/28/使用github+jekyll</id>
+   <content type="html">&lt;!DOCTYPE html&gt;
+&lt;!-- saved from url=(0014)about:internet --&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;
+&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=9&quot; &gt;
+
+&lt;title&gt;使用github+jekyll&lt;/title&gt;
+
+&lt;style type=&quot;text/css&quot;&gt;
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+&lt;/style&gt;
+
+
+
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;使用github+jekyll&lt;/h1&gt;
+
+&lt;h2&gt;Linux 命令&lt;/h2&gt;
+
+&lt;p&gt;以下是在 Linux 系统下的 bash 命令语句:&lt;/p&gt;
+
+&lt;h3&gt;复制库到本地磁盘&lt;/h3&gt;
+
+&lt;p&gt;从 github 将项目 (project) 复制 (fork) 到本地磁盘中,基本格式是:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;git clone &lt;a href=&quot;mailto:git@github.com&quot;&gt;git@github.com&lt;/a&gt;:USERNAME/USERNAME.github.com.git TARGETED_FILE&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;其中,TARGETED_FILE 通常是以 USERNAME.github.com.git 作为存放目录,比如我一般是放在 /home/william/williamlfang.github.com. &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;git clone &lt;a href=&quot;mailto:git@github.com&quot;&gt;git@github.com&lt;/a&gt;:williamlfang/williamlfang.github.com.git williamlfang.github.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;注意&lt;/em&gt; 这里我引用的是如下的模板设计:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;git clone &lt;a href=&quot;mailto:git@github.com&quot;&gt;git@github.com&lt;/a&gt;:pala/pala.github.com.git&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;当然,对于一个 project, 也可以直接以其项目命名.&lt;/p&gt;
+
+&lt;h3&gt;更改项目文件&lt;/h3&gt;
+
+&lt;p&gt;对于修改的文件,如果想要将其上传到 Github 空间存储,需要经过如下几个步骤&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;------------------------------------------------------------------------------
+## williamlfang.github.com
+------------------------------------------------------------------------------
+cd /home/william/williamlfang.github.com
+git add . -A           # 上传全部文件 */
+git commit -m &amp;quot;&amp;quot;       #  加上注解说明有助于日后维护
+
+git remote rm origin   # 删除历史保存
+git remote add origin git@github.com:williamlfang/williamlfang.github.com.git
+                       # williamlfang.github.com
+git push origin master
+
+jekyll --server        # 在本地文件预览效果, 可打开: 127.0.0.1:4000
+
+
+------------------------------------------------------------------------------
+## williamlfang.github.com/blogs
+------------------------------------------------------------------------------
+cd /home/william/williamlfang.github.com
+git add . -A           # 上传全部文件 */
+git commit -m &amp;quot;&amp;quot;       #  加上注解说明有助于日后维护
+
+git remote rm origin   # 删除历史保存
+git remote add origin git@github.com:williamlfang/blogs.git
+                       # williamlfang.github.com/blogs
+git push origin master
+
+jekyll --server        # 在本地文件预览效果, 可打开: 127.0.0.1:4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
 </content>
  </entry>
  
