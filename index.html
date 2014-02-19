@@ -99,16 +99,33 @@
             <div class="col-md-6" align="center">
                 <div>
                     <div class="foo">
+
                         <span class="letter" data-letter="W">W</span>
                         <span class="letter" data-letter="i">i</span>
                         <span class="letter" data-letter="l">l</span>
-			<span class="letter" data-letter="l">l</span>
+		<span class="letter" data-letter="l">l</span>
                         <span class="letter" data-letter="i">i</span>
                         <span class="letter" data-letter="a">a</span>
                         <span class="letter" data-letter="m">m</span>
+                      <!--                     
+                        <span class="letter" data-letter="一">一</span>
+                        <span class="letter" data-letter="个">个</span>
+                        <span class="letter" data-letter="纯">纯</span>
+                        <span class="letter" data-letter="粹">粹</span>
+                        <span class="letter" data-letter="的">的</span>
+                        <span class="letter" data-letter="人">人</span>
+                         -->
                     </div>
+                    <!--
+                    <div align="center">
+                    <p style="color:white">
+                    一个没有忧伤的傻子
+                    纯粹的人
+                    </p>
+                    </div>
+                    -->
                     <br>
-                    <br>
+                  <!--  <br>  -->
                 </div>
                 <br>
                 <input class="form-control input-lg" type="text" id='voice' x-webkit-speech="x-webkit-speech" lang="zh-CN" onwebkitspeechchange="searchG()" onkeydown="if(event.keyCode==13){searchG();}" />
@@ -119,13 +136,16 @@
                 <br>
                 <br>
                 <p style="color:grey">
-                    Powered by Google & Baidu &
+                    <!-- Powered by Google  -->
+                    <!-- & Baidu &
                     <a href="http://www.bootcss.com">Bootstrap</a>
+                    -->
+                    Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub</a> | Copyright 2013 - {{site.time | date:"%Y"}} by <a href="http://williamlfang.github.com">William Fang</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S"}}</span>
                 </p>
-
+                <!-- 
                <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="http://pages.github.com">GitHub</a> | Copyright 2013 - {{site.time | date:"%Y"}} by <a href="http://williamlfang.github.com">William Fang</a> | <span class="label label-info">{{site.time | date:"%Y-%m-%d %H:%M:%S"}}</span></small>
 		</p>
-
+                -->
             </div>
             <div class="col-md-3"></div>
         </div>
