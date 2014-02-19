@@ -7,3 +7,6 @@ git remote add origin git@github.com:williamlfang/williamlfang.github.com.git
 git push origin master
 
 jekyll --server         
+
+
+
