@@ -1,15 +1,9 @@
 #timeline-navbar {
-	/*
 	margin-top: 35px;
-	*/
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-right: -5px;
-	margin-left: 0px;
 }
 #timeline {
 	background: url(http://dummyimage.com/1x1/000000/000000.gif) top center repeat-y;
-	width: 625px;               
+	width: 625px;
 	padding: 50px 0;
 	margin: 0 auto;
 	overflow: hidden;
@@ -45,8 +39,6 @@
 #timeline li:nth-of-type(even) {
 	margin: -10px 0 0 0;
 }
-
-
 #timeline li:nth-of-type(even) {
 	float: right;
 	text-align: left;
