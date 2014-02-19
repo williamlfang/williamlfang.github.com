@@ -26,7 +26,16 @@
 </script>
 -->
 
-<!DOCTYPE html>
+<script type="text/javascript">
+	var retina = 'retina='+ window.devicePixelRatio +';'+ retina;
+	var screenwidth = 'screenwidth='+ window.screen.width;
+	document.cookie = retina;
+	document.cookie = screenwidth;
+	if(window.devicePixelRatio > 1){
+		document.location.reload(true);
+	}
+</script>
+	<!DOCTYPE html>
 <!--[if IE]>
 <html id="ie" lang="zh-CN">
 <![endif]-->
@@ -38,48 +47,43 @@
 <title>Journey · William Fang</title>
 
 <!-- 
-<meta name="Description" content="罗龙, Long Luo, Frank Luo, 个人网站, 技术博客, 互联网, 移动互联网, IT, Internet, Mobile Internet, Android, iOS, App, 程序员, Programmer, Coder, 罗龙的旅行足迹, 国内, 中国" />
-<meta name="keywords" content="罗龙, Long Luo, IT, 个人网站, 技术博客, 互联网, 移动互联网, 技术博客, App, iOS, Android, 编程, 程序员, 旅行, Program, Computer, 地图, China, 中国, 旅行, 旅游, 足迹" />
-<meta name="Author" content="Long Luo, 罗龙, Frank Luo" / >
-
+<meta name="Description" content="翁天信（Dandy Weng）的旅行足迹。我是一个爱旅行的人，每年有将近四分之一的时间都在路上。我 18 岁前就在大半个中国留下了足迹。走遍世界周游列国，对我而言并不止于是个梦想而已。" />
+<meta name="keywords" content="翁天信,Dandy Weng" />
+<meta name="Author" contect="Dandy Weng" / >
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-title" content="旅行足迹" />
 -->
 
-<link rel="apple-touch-icon-precomposed" url("/assets/images/icon.png")/>
-<link rel="shortcut icon" href="/assets/images/favicon.ico" />
-<link rel="icon" href="/assets/images/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="http://www.dandyweng.com/images/ios/icon.png" />
+<link rel="shortcut icon" href="http://www.dandyweng.com/images/favicon.ico" />
+<link rel="icon" href="http://www.dandyweng.com/images/favicon.ico" />
 
-<link href="http://databank.u.qiniudn.com/bootstrap/global.min.css" rel="stylesheet" media="screen" />
-<link href="http://databank.u.qiniudn.com/bootstrap/responsive.min.css" rel="stylesheet" media="screen" />
-<link href="http://databank.u.qiniudn.com/map/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" media="screen" />
-<link href="http://databank.u.qiniudn.com/css/jquery.montage.css" rel="stylesheet" media="screen" />
+<link href="/media/main/css/bootstrap/global.min.css" rel="stylesheet" media="screen" />
+<link href="/media/main/css/bootstrap/responsive.min.css" rel="stylesheet" media="screen" />
+<link href="/media/main/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" media="screen" />
+<link href="/media/main/css/jquery.montage.css" rel="stylesheet" media="screen" />
 
 <script type="text/javascript" src="/media/main/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="/media/main/js/pjax.js"></script>
 <script type="text/javascript" src="/media/main/js/jquery-jvectormap-1.2.2.min.js"></script>
 <script type="text/javascript" src="/media/main/js/jquery-jvectormap-cn-merc-cn.js"></script>
-<script type="text/javascript" src="/media/main/js/jquery-jvectormap-cn-merc-en.js"></script>
 <script type="text/javascript" src="/media/main/js/jquery-jvectormap-world-mill-en.js"></script>
-<script type="text/javascript" src="/media/main/s/jquery.montage.min.js"></script>
+<script type="text/javascript" src="/media/main/js/jquery.montage.min.js"></script>
 
 <!--[if lt IE 9]>
-<script type="text/javascript" src="http://databank.u.qiniudn.com/js/html5.js"></script> 
+<script type="text/javascript" src="http://dw-resources.qiniudn.com/js/html5.js"></script> 
 <![endif]-->
 
 <style>
 @charset "utf-8";
 
-/* = Designed and Developed By Long Luo */
-/* = Global CSS */
-/* ----------------------------------------------- */
+/* = Designed and Developed by Dandy Weng 
+/* = Global
+----------------------------------------------- */
 body {
 	overflow-x: hidden;
 	background-color: #999;
-	/*
-	background-image:url(http://databank.u.qiniudn.com/images/travel_bg.jpg);
-	*/
 	background-image:url(data:image/jpeg;base64,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);
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -146,10 +150,10 @@ h1, h2, h3, h4, h5, p, span {
 
 #ie #header,
 #mobile #header {
-	background: url("/assets/images/header-image.jpg") no-repeat;
+	background: url("../images/header-image.jpg") no-repeat;
 	background-size: 100%;
 	background-size: cover;
-	filter: alpha(opacity = 80) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/header-image.jpg', sizingMethod='scale')\9;
+	filter: alpha(opacity = 80) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/header-image.jpg', sizingMethod='scale')\9;
 }
 
 #ie #handle,
@@ -233,7 +237,7 @@ h1, h2, h3, h4, h5, p, span {
 	position: absolute;
 	top: 0;
 	margin: 0px auto;
-	background: rgba(0, 0, 0, 0.8) url("/assets/images/mooning.jpg") repeat;	 
+	/* background: rgba(0, 0, 0, 0.8) url("http://dw-resources.qiniudn.com/images/patterns/mooning.jpg") repeat;	 */
 	-webkit-transition: all 1s ease-in-out;
 	   -moz-transition: all 1s ease-in-out;
 			transition: all 1s ease-in-out;
@@ -347,11 +351,10 @@ h1, h2, h3, h4, h5, p, span {
 /* = Components
 ----------------------------------------------- */
 
-
 .main {
 	position: relative;
 	width: 100%;	
-	background: #999 url("http://databank.u.qiniudn.com/images/patterns/white_wall_hash.jpg") repeat;
+	background: #999 url("http://dw-resources.qiniudn.com/images/patterns/white_wall_hash.jpg") repeat;
 	border-top: #E6E6E6 solid 1px;
 	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25), 0px 5px 30px 3px rgba(0, 0, 0, 0.2) inset;
 	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, 0.35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25), 0px 5px 30px 3px rgba(0, 0, 0, 0.2) inset;
@@ -474,7 +477,7 @@ footer {
 #map {
 	height: 800px;
 	width: 100%;
-	background: url("/assets/images/map_bg_fit.jpg");
+	background: url("http://dw-resources.qiniudn.com/map/images/map_bg_fit.jpg");
 	background-size: cover;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -561,7 +564,7 @@ footer {
 		font: 500 13px/1.5 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
 	}
 	#header {
-		background: url("/assets/images/header-image.jpg") no-repeat;
+		background: url("../images/header-image.jpg") no-repeat;
 		background-size: 100%;
 		background-size: cover;
 	}
@@ -599,7 +602,7 @@ footer {
 ----------------------------------------------- */
 ::-webkit-scrollbar {
 	width: 10px;
-	background: #cacaca url("/assets/images/mooning.jpg");
+	background: #cacaca url("http://dw-resources.qiniudn.com/images/patterns/mooning.jpg");
 	opacity: .8;	
 	-webkit-transition: .25s;
 }
@@ -609,7 +612,7 @@ footer {
 	-webkit-transition: .25s;
 }
 ::-webkit-scrollbar-track {
-	background: #cacaca url("/assets/images/mooning.jpg");
+	background: #cacaca url("http://dw-resources.qiniudn.com/images/patterns/mooning.jpg");
 	/* border: thin solid lightgray; 
 	box-shadow: 0px 0px 3px #dfdfdf inset; */
 	border-radius: 10px;
@@ -630,7 +633,6 @@ footer {
 </head>
 
 <body>
-
 <div id="header-camarts-entry" class="navbar navbar-inverse hide">
     <div class="navbar-inner">
         <div class="container">
@@ -641,15 +643,429 @@ footer {
 
 <header id="header" class="jumbotron jumbotron-shadow">
     <div id="header-text" class="container header-elements">
-        <h1 id="title" class="header-elements"><img src="/assets/images/title.png" width="150" height="60"></h1>
+        <h1 id="title" class="header-elements"><img src="/assets/images/title.png" width="100" height="40"></h1>
         <p id="subtitle" class="lead"> William's Journey <br class="visible-desktop">
          Life is a long long journey.<br>
-        <a id="website-link" href="http://williamlfang.github.io/en/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">Surf My Website »</a></p>
+        <a id="website-link" href="http://williamlfang.github.io/en/" class="lead-link text-center" target="_blank" title="Know More" data-toggle="tooltip" data-placement="bottom">Surf My Website »</a></p>
 	</div>
 	
     <div class="am-container under blur" id="am-container">
 			
-	<span class="montage-copyright">My Works Show Wall <a href="javascript:;" onclick="javascript:window.location.reload()">刷新页面换一换</a> | <a href="http://williamlfang.github.io/cn/" target="_blank">&copy;2005-2013</a> <a href="http://williamlfang.github.io/cn/" target="_blank">William Fang&reg;</a></span>
+<a id='img_50' href='http://www.camarts.cn/archives/1282.html' title='《鹅銮鼻》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/50.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_50').hover(function(){
+				$('#img_50').tooltip('show');
+			});
+			</script>
+<a id='img_61' href='http://www.camarts.cn/archives/1610.html' title='《行摄拉卜楞寺》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/61.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_61').hover(function(){
+				$('#img_61').tooltip('show');
+			});
+			</script>
+<a id='img_27' href='http://www.camarts.cn/archives/607.html' title='《达孜》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/27.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_27').hover(function(){
+				$('#img_27').tooltip('show');
+			});
+			</script>
+<a id='img_65' href='http://www.camarts.cn/archives/1707.html' title='《多喀尕秀》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/65.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_65').hover(function(){
+				$('#img_65').tooltip('show');
+			});
+			</script>
+<a id='img_15' href='http://www.camarts.cn/archives/523.html' title='《紫金之巅》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/15.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_15').hover(function(){
+				$('#img_15').tooltip('show');
+			});
+			</script>
+<a id='img_57' href='http://www.camarts.cn/archives/1427.html' title='《野柳岬》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/57.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_57').hover(function(){
+				$('#img_57').tooltip('show');
+			});
+			</script>
+<a id='img_4' href='http://www.camarts.cn/archives/312.html' title='《雾中峨眉》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/4.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_4').hover(function(){
+				$('#img_4').tooltip('show');
+			});
+			</script>
+<a id='img_88' href='http://www.camarts.cn/archives/2245.html' title='《草海秋色》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/88.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_88').hover(function(){
+				$('#img_88').tooltip('show');
+			});
+			</script>
+<a id='img_14' href='http://www.camarts.cn/archives/515.html' title='《牛奶海》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/14.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_14').hover(function(){
+				$('#img_14').tooltip('show');
+			});
+			</script>
+<a id='img_33' href='http://www.camarts.cn/archives/667.html' title='《大昭寺》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/33.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_33').hover(function(){
+				$('#img_33').tooltip('show');
+			});
+			</script>
+<a id='img_66' href='http://www.camarts.cn/archives/1726.html' title='《尕海草原》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/66.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_66').hover(function(){
+				$('#img_66').tooltip('show');
+			});
+			</script>
+<a id='img_63' href='http://www.camarts.cn/archives/1643.html' title='《夏河》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/63.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_63').hover(function(){
+				$('#img_63').tooltip('show');
+			});
+			</script>
+<a id='img_53' href='http://www.camarts.cn/archives/1362.html' title='《阿里山》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/53.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_53').hover(function(){
+				$('#img_53').tooltip('show');
+			});
+			</script>
+<a id='img_67' href='http://www.camarts.cn/archives/1740.html' title='《日落尕海》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/67.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_67').hover(function(){
+				$('#img_67').tooltip('show');
+			});
+			</script>
+<a id='img_72' href='http://www.camarts.cn/archives/1824.html' title='《初探奇侠沟》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/72.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_72').hover(function(){
+				$('#img_72').tooltip('show');
+			});
+			</script>
+<a id='img_39' href='http://www.camarts.cn/archives/868.html' title='《天安门》北京' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/39.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_39').hover(function(){
+				$('#img_39').tooltip('show');
+			});
+			</script>
+<a id='img_84' href='http://www.camarts.cn/archives/2146.html' title='《珍珠滩瀑布》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/84.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_84').hover(function(){
+				$('#img_84').tooltip('show');
+			});
+			</script>
+<a id='img_25' href='http://www.camarts.cn/archives/589.html' title='《工布江达》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/25.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_25').hover(function(){
+				$('#img_25').tooltip('show');
+			});
+			</script>
+<a id='img_86' href='http://www.camarts.cn/archives/2199.html' title='《五彩池》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/86.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_86').hover(function(){
+				$('#img_86').tooltip('show');
+			});
+			</script>
+<a id='img_85' href='http://www.camarts.cn/archives/2176.html' title='《九寨长海》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/85.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_85').hover(function(){
+				$('#img_85').tooltip('show');
+			});
+			</script>
+<a id='img_42' href='http://www.camarts.cn/archives/948.html' title='《拙政园》江苏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/42.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_42').hover(function(){
+				$('#img_42').tooltip('show');
+			});
+			</script>
+<a id='img_48' href='http://www.camarts.cn/archives/1271.html' title='《船帆石》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/48.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_48').hover(function(){
+				$('#img_48').tooltip('show');
+			});
+			</script>
+<a id='img_45' href='http://www.camarts.cn/archives/1046.html' title='《寒山寺》江苏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/45.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_45').hover(function(){
+				$('#img_45').tooltip('show');
+			});
+			</script>
+<a id='img_55' href='http://www.camarts.cn/archives/1374.html' title='《日月潭》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/55.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_55').hover(function(){
+				$('#img_55').tooltip('show');
+			});
+			</script>
+<a id='img_75' href='http://www.camarts.cn/archives/1858.html' title='《雪宝顶掠影》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/75.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_75').hover(function(){
+				$('#img_75').tooltip('show');
+			});
+			</script>
+<a id='img_87' href='http://www.camarts.cn/archives/2227.html' title='《平武山景》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/87.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_87').hover(function(){
+				$('#img_87').tooltip('show');
+			});
+			</script>
+<a id='img_21' href='http://www.camarts.cn/archives/549.html' title='《在路上（昌都篇）》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/21.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_21').hover(function(){
+				$('#img_21').tooltip('show');
+			});
+			</script>
+<a id='img_62' href='http://www.camarts.cn/archives/1633.html' title='《桑科草原》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/62.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_62').hover(function(){
+				$('#img_62').tooltip('show');
+			});
+			</script>
+<a id='img_40' href='http://www.camarts.cn/archives/877.html' title='《惠山古镇》江苏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/40.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_40').hover(function(){
+				$('#img_40').tooltip('show');
+			});
+			</script>
+<a id='img_32' href='http://www.camarts.cn/archives/654.html' title='《布达拉》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/32.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_32').hover(function(){
+				$('#img_32').tooltip('show');
+			});
+			</script>
+<a id='img_38' href='http://www.camarts.cn/archives/858.html' title='《石乃海》青海' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/38.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_38').hover(function(){
+				$('#img_38').tooltip('show');
+			});
+			</script>
+<a id='img_5' href='http://www.camarts.cn/archives/339.html' title='《都江堰》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/5.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_5').hover(function(){
+				$('#img_5').tooltip('show');
+			});
+			</script>
+<a id='img_80' href='http://www.camarts.cn/archives/1996.html' title='《龙海小瀑》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/80.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_80').hover(function(){
+				$('#img_80').tooltip('show');
+			});
+			</script>
+<a id='img_59' href='http://www.camarts.cn/archives/1503.html' title='《西安掠影》陕西' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/59.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_59').hover(function(){
+				$('#img_59').tooltip('show');
+			});
+			</script>
+<a id='img_83' href='http://www.camarts.cn/archives/2113.html' title='《漫步五花海》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/83.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_83').hover(function(){
+				$('#img_83').tooltip('show');
+			});
+			</script>
+<a id='img_74' href='http://www.camarts.cn/archives/1858.html' title='《雪宝顶掠影》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/74.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_74').hover(function(){
+				$('#img_74').tooltip('show');
+			});
+			</script>
+<a id='img_52' href='http://www.camarts.cn/archives/1330.html' title='《骤雨中的墾丁》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/52.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_52').hover(function(){
+				$('#img_52').tooltip('show');
+			});
+			</script>
+<a id='img_16' href='http://www.camarts.cn/archives/532.html' title='《天边的牦牛》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/16.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_16').hover(function(){
+				$('#img_16').tooltip('show');
+			});
+			</script>
+<a id='img_76' href='http://www.camarts.cn/archives/1872.html' title='《黄龙之池》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/76.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_76').hover(function(){
+				$('#img_76').tooltip('show');
+			});
+			</script>
+<a id='img_69' href='http://www.camarts.cn/archives/1770.html' title='《唐克乡》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/69.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_69').hover(function(){
+				$('#img_69').tooltip('show');
+			});
+			</script>
+<a id='img_10' href='http://www.camarts.cn/archives/439.html' title='《牛朗神山》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/10.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_10').hover(function(){
+				$('#img_10').tooltip('show');
+			});
+			</script>
+<a id='img_43' href='http://www.camarts.cn/archives/1028.html' title='《七里山塘》江苏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/43.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_43').hover(function(){
+				$('#img_43').tooltip('show');
+			});
+			</script>
+<a id='img_51' href='http://www.camarts.cn/archives/1323.html' title='《墾丁大街》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/51.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_51').hover(function(){
+				$('#img_51').tooltip('show');
+			});
+			</script>
+<a id='img_6' href='http://www.camarts.cn/archives/360.html' title='《远眺大渡河》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/6.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_6').hover(function(){
+				$('#img_6').tooltip('show');
+			});
+			</script>
+<a id='img_22' href='http://www.camarts.cn/archives/559.html' title='《然乌湖》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/22.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_22').hover(function(){
+				$('#img_22').tooltip('show');
+			});
+			</script>
+<a id='img_60' href='http://www.camarts.cn/archives/1557.html' title='《陇南山景》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/60.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_60').hover(function(){
+				$('#img_60').tooltip('show');
+			});
+			</script>
+<a id='img_77' href='http://www.camarts.cn/archives/1872.html' title='《黄龙之池》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/77.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_77').hover(function(){
+				$('#img_77').tooltip('show');
+			});
+			</script>
+<a id='img_17' href='http://www.camarts.cn/archives/542.html' title='《澜沧江》云南' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/17.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_17').hover(function(){
+				$('#img_17').tooltip('show');
+			});
+			</script>
+<a id='img_47' href='http://www.camarts.cn/archives/1241.html' title='《打狗英领馆》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/47.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_47').hover(function(){
+				$('#img_47').tooltip('show');
+			});
+			</script>
+<a id='img_64' href='http://www.camarts.cn/archives/1648.html' title='《俯瞰拉卜楞寺》甘肃' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/64.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_64').hover(function(){
+				$('#img_64').tooltip('show');
+			});
+			</script>
+<a id='img_56' href='http://www.camarts.cn/archives/1381.html' title='《中台禅寺》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/56.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_56').hover(function(){
+				$('#img_56').tooltip('show');
+			});
+			</script>
+<a id='img_49' href='http://www.camarts.cn/archives/1278.html' title='《墾丁民宿》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/49.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_49').hover(function(){
+				$('#img_49').tooltip('show');
+			});
+			</script>
+<a id='img_29' href='http://www.camarts.cn/archives/632.html' title='《拉萨河》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/29.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_29').hover(function(){
+				$('#img_29').tooltip('show');
+			});
+			</script>
+<a id='img_91' href='http://www.camarts.cn/archives/2375.html' title='《里格岛掠影》云南' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/91.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_91').hover(function(){
+				$('#img_91').tooltip('show');
+			});
+			</script>
+<a id='img_58' href='http://www.camarts.cn/archives/1453.html' title='《俯瞰台北》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/58.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_58').hover(function(){
+				$('#img_58').tooltip('show');
+			});
+			</script>
+<a id='img_34' href='http://www.camarts.cn/archives/672.html' title='《羊八井》西藏' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/34.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_34').hover(function(){
+				$('#img_34').tooltip('show');
+			});
+			</script>
+<a id='img_2' href='http://www.camarts.cn/archives/283.html' title='《重庆掠影》重庆' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/2.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_2').hover(function(){
+				$('#img_2').tooltip('show');
+			});
+			</script>
+<a id='img_81' href='http://www.camarts.cn/archives/2043.html' title='《诺日朗瀑布》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/81.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_81').hover(function(){
+				$('#img_81').tooltip('show');
+			});
+			</script>
+<a id='img_82' href='http://www.camarts.cn/archives/2077.html' title='《熊猫海瀑布》四川' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/82.jpg?imageMogr/v2/quality/80'></a>
+
+			<script>
+			$('#img_82').hover(function(){
+				$('#img_82').tooltip('show');
+			});
+			</script>
+
+	<span class="montage-copyright">My Works Show Wall <a href="javascript:;" onclick="javascript:window.location.reload()">Refresh</a> | <a href="http://williamlfang.github.io/cn/" target="_blank">&copy;2005-2013</a> <a href="http://williamlfang.github.io/cn/" target="_blank">William Fang&reg;</a></span>
     </div>
     <div id="header-shadow" class="shadow"></div>
     <div id="handle" class="hide">
@@ -658,8 +1074,8 @@ footer {
 </header>
 
 <div id="loading" class="text-center">
-    <img class="spinner" src="/assets/images/spinner.gif">
-    <span>加载中...</span>
+    <img class="spinner" src="http://dw-resources.qiniudn.com/images/spinner.gif">
+    <span>加载中</span>
 </div>
 
 <article id="content" class="main">	<div class="side-shadow left"></div>
@@ -667,14 +1083,12 @@ footer {
     
 	<nav class="main-nav">
         <ul class="nav nav-tabs nav-maps">
-            <li><a id="link-to-china" href="http://williamlfang.github.io/" title="Change to China Map" pjax-title=" William's Journey" data-toggle="tooltip">China</a></li>
+            <li><a id="link-to-china" href="http://travel.dandyweng.com/china/" title="切换到中国地图" pjax-title="旅行足迹 · 翁天信 Dandy Weng" data-toggle="tooltip">中国</a></li>
             <li class="active">
-                <a id="link-to-world" href="javascript:;" data-toggle="tooltip">World</a>
+                <a id="link-to-world" href="javascript:;" data-toggle="tooltip">世界</a>
             </li>
-			<!--
             <li class="disabled"><a id="link-to-america" href="javascript:;" title="暂未开放" data-toggle="tooltip">美洲</a></li>
             <li class="disabled"><a id="link-to-europe" href="javascript:;" title="暂未开放" data-toggle="tooltip">欧洲</a></li>
-			-->
         </ul>
     </nav>
     
@@ -682,20 +1096,20 @@ footer {
     	<div class="row">      
         	<div class="span12">  
                 <div id="map"></div>
-                <script type="text/javascript" src="http://databank.u.qiniudn.com/map/js/map-data-world.js"></script>
+                <script type="text/javascript" src="http://dw-resources.qiniudn.com/map/js/map-data-world.js"></script>
             </div>
             
             <div class="span12 about">
             	<div class="row">                    
                     <div class="span6 offset3">
-                    	<h3 class="text-center">About Map </h3>
-                        <p>Map with Red Pot representing for the place where I had reached </p>
+                    	<h3 class="text-center">关于地图数据</h3>
+                        <p>地图中以红点标示的为我曾到达过的城市或地区</p>
                         <ul>
-                        	<li><p>The Map Source: <a href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a></p></li>
-                            <li><p>All of these are the important experience of my life;</p></li>
-                            <li><p>All the Geo co-ordinates are from the Google Map;</p></li>         
-                            <li><p>You can change to the country to view the details, such as <a href="china.html" title="Change to China Map" pjax-title="Journey Frank Luo">China</a>;</p></li> 
-                            <li><p>Last Update Time: 20th, Febuary, 2014. </p></li>
+                        	<li><p>地图数据来自 <a href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a></p></li>
+                            <li><p>为避免坐标点过于密集，该世界地图中各国家和地区只标示其主要城市或有特殊意义的城市；</p></li>
+                            <li><p>2009 年或更早的坐标信息，来源于在 Google 地图 查询中到的该城市坐标，2010 年后的坐标信息来源于使用 iPhone 在当地所拍摄照片时所记录的 GPS 信息；</p></li>         
+                            <li><p>切换至相应国家或地区的地图可查看完整的数据（如 <a href="http://travel.dandyweng.com/china/" title="切换到中国地图" pjax-title="旅行足迹 · 翁天信 Dandy Weng">中国</a>）；</p></li> 
+                            <li><p>最后更新时间：2013 年 7 月</p></li>
                         </ul>
                     </div>          
                 </div>
@@ -729,11 +1143,11 @@ footer {
 </article>
 
 <footer>
-<p>Designed and Developed By <a href="http://www.imlongluo.com/">Long Luo</a>.</p>
-<p>Copyright &copy; 2013 - 2014 <a href="http://williamlfang.github.com">William Fang</a>. All Rights Reserved.</p>
+<p>Designed and Developed by Dandy Weng. BY-NC-SA License.</p>
+<p>Copyright © 2011-2014 Dandy Weng. All Rights Reserved.</p>
 </footer>
 
-<script type="text/javascript" src="/media/main/css/bootstrap/scripts.min.js"></script>
+<script type="text/javascript" src="http://dw-resources.qiniudn.com/bootstrap/scripts.min.js"></script>
 <script type="text/javascript">
 
 var $container 	= $('#am-container'),
@@ -823,7 +1237,7 @@ $('#handle').click(function(){
 */
 
 $.pjax({
-     selector: 'a[href^="http://williamlfang.github.io/cn/journey/"]',
+     selector: 'a[href^="http://travel.dandyweng.com"]',
      container: '#content', //内容替换的容器
      show: 'fade', //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
      cache: false, //是否使用缓存
@@ -841,17 +1255,6 @@ $.pjax({
         $('#loading').hide();
     })
 </script>
-
-<!-- Baidu Statistics -->
-<p style="text-indent: -9999px;"><script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb4c6c0df76415ca14358f56e0f957de1' type='text/javascript'%3E%3C/script%3E"));
-</script>
-</p>
-
-<!-- CNZZ Statistics -->
-<p style="text-indent: -9999px;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000135599'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000135599%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
-
+<p style="text-indent: -9999px;"><script src="http://s24.cnzz.com/stat.php?id=5620106&web_id=5620106" language="JavaScript"></script></p>
 </body>
 </html>
-
