@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://www.simsimi.com/talk.htm# -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>心理咨询机器人</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="http://www.find1x.com/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="http://www.find1x.com/favicon.ico" type="image/x-icon">
+	<script type="text/javascript" src="./js/jquery-1.4.4.min.js"></script>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/rob.js"></script>
+	<link rel="stylesheet" href="./css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="./css/rob.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css"></head>
+<body>
+	<script type="text/javascript">var n=0</script>
+	<input type="hidden" name="hid-lang" id="hid-lang" value="zh">
+
+	<div id="wrapper-talk">
+		<div id="contents" style="display: block;">
+			<div id="logo-area">
+				<div id="logo-text">
+					<img src="./img/ff.png" width="100px" alt="FindiX logo" title="FindiX logo">
+					<div>心理咨询机器人 (for 汪瞻)</div>
+				</div>
+			</div>
+			<div id="chat">
+				<div id="msgs" style="background:url(./img/bg.jpg);background-repeat : repeat;">
+					<table id="chatTable" class="new-templete">
+						<tr>
+							<td class="left-convo">
+								<img src="./img/rob.gif" width="50px" />
+								你好
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="chat-bottom">
+					<br />
+					<div class="input-group">
+						<input id="chat-area" type="text" class="form-control" placeholder="请输入" onkeydown="if(event.keyCode==13){submit();}" autofocus />
+						<span class="input-group-btn">
+							<input class="btn btn-success btn-block" type="button" onclick="submit()" value="&nbsp发送&nbsp" />
+						</span>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="right">
+					© FindiX Studio.
+					<a href="http://www.find1x.com/" class="space">主页</a>
+					<a href="http://blog.find1x.com/" class="space ">Blog</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<table class="templete hidden">
+		<tbody>
+			<tr>
+				<td class="hu">
+					<div class="img-hu"></div>
+					<div class="right-convo"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="bot">
+					<div class="img-bot"></div>
+					<div class="left-convo"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
