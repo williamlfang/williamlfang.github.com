@@ -1765,7 +1765,7 @@ a.thumbnail small {
 </style>
 </head>
 
-<body>
+<body  data-spy="scroll" data-target=".navbar" onload="completed();" ontouchstart="">
 <div id="header-camarts-entry" class="navbar navbar-inverse hide">
     <div class="navbar-inner">
         <div class="container">
@@ -2253,6 +2253,8 @@ a.thumbnail small {
     <span>加载中</span>
 </div>
 
+<div class="shadow"></div>
+
 <article id="content" class="main">	<div class="side-shadow left"></div>
     <div class="side-shadow right"></div>
     
@@ -2274,128 +2276,290 @@ a.thumbnail small {
                 <div id="map"></div>
                 <script type="text/javascript" src="/media/main/js/map-data-china-full.js"></script>
             </div>
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-            <div class="span12 about">
-            	<div class="row">                    
-                    <div class="span6 offset3">
-                    	<h3 class="text-center">田字格的忧伤</h3>
-                        <!-- <p>地图中以红点标示的为我曾到达过的城市</p>
-                        -->
-                        <ul>
-                            <li><p>喜悦的伤感,还有忧郁的欢乐,就像孩童时代的田字格,简单地交错杂织.</a></p></li>
-                            <li><p>我却一直都认为它们是最复杂的星象图,自己似乎永远也写不好那些脆弱的线条,悟不透那些擦破天际的逆轨.</p></li>
-                            <li><p>还有很多的事,已经不能完成的,没能想要完成的,还有来不及完成的,就像纯洁的田字格.</p></li>         
-                            <li><p>想好好写下灿烂如莲花绽放.</p></li> 
-                            <li><p>最后更新时间：2014 年 2 月</p></li>
-                        </ul>
-                    </div>                   
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="page-shadow" class="shadow shadow-main hide"></div>
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-<div class="shadow"></div>
-<article class="container"> 
-
     
-    <!--  旅行 Travel  -->
+ 
+	<!--   Remove this module.  -->
+    <!--  写作 Writing  -->
+    <!--
+    <section id="writing" class="row">
+   		<div class="span12 panel">
+        	<div class="row">
+                <div class="span8">
 
+                <div class="span4">
+                	<div class="padding-large">
+                        <h1>写作</h1>
+                        <p class="wo">我喜欢写作</p>
+                        <a href="http://www.imlongluo.com/blog/" target="_blank" class="btn btn-info btn-large button">我的一些随笔</a>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </section>
+	-->
 
-    <section id="travel" class="row">
+	<!--   Remove this module.  -->
+    <!--  音乐 Music  -->
+    <!--
+    <section id="music" class="row">
+   		<div class="span12 panel">
+        	<div class="row">
+                <div class="span4">
+                	<div class="padding-large">
+                        <h1>音乐</h1>
+                        <p class="wo">我喜欢音乐</p>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </section>
+	-->
+
+	<!--   Remove this module.   -->
+    <!--  摄影 Photography  -->
+    <!--
+    <section id="photography" class="row">
+   		<div class="span12 panel">
+        	<div class="row">
+                <div class="span8">
+				
+                    <div id="photograph" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#photograph" data-slide-to="0" class="active"> </li>
+                            <li data-target="#photograph" data-slide-to="1"></li>
+                            <li data-target="#photograph" data-slide-to="2"></li>
+                            <li data-target="#photograph" data-slide-to="3"></li>
+                            <li data-target="#photograph" data-slide-to="4"></li>
+                            <li data-target="#photograph" data-slide-to="5"></li>
+                            <li data-target="#photograph" data-slide-to="6"></li>
+                            <li data-target="#photograph" data-slide-to="7"></li>
+                            <li data-target="#photograph" data-slide-to="8"></li>
+                            <li data-target="#photograph" data-slide-to="9"></li>
+                        </ol>
+                        
+						// Carousel items 
+                        <div class="carousel-inner">
+                            <div class="active item"><a href="http://www.camarts.cn/archives/549.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://databank.qiniudn.com/images/carousel/carousel-01.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/523.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-02.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/594.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-03.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/532.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-04.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/439.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-05.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/542.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-06.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/638.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-07.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/632.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-08.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/647.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-09.jpg"></a></div>
+                            <div class="item"><a href="http://www.camarts.cn/archives/1453.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-10.jpg"></a></div>
+                            
+                        </div>
+                        
+                        <a class="carousel-control left" href="#photograph" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#photograph" data-slide="next">&rsaquo;</a>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                	<div class="padding-large">
+                        <h1>摄影</h1>
+                        <p class="wo">我爱摄影，尤其是壮美的自然风光。</p>
+                        
+                        <a href="http://www.imlongluo.com" target="_blank" class="btn btn-info btn-large button">浏览我的摄影作品</a>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </section>
+	-->
+    
+    <!--  创造 Creativity  -->
+
+    <section id="creativity" class="row">
         <div class="span12 panel">
             <div class="row">
-                <div class="span6">
-                    <div class="block-left">
-                        <h1>旅行</h1>
-                        <p class="wo">What is a journey? A journey is not a trip. It's not a vacation. It's a process. A Discovery. It's a process of self-discovery. </p>
-                        <br />
-                        <p class="wo">A journey brings us face to face with ourselves. A journey shows us not only the world, but how we fit in it. Does the person create the journey or does the journey create the person? The journey is life itself. Where will life take you? </p>
-                        <br />
-                        <p class="wo">如果不去接触未知，我们的感觉将变得迟钝，我们的世界就那么小小的一点儿，就连好奇心也将消失不见。我们的目光将不再放眼远方的地平线，耳朵也听不到那些熟悉的声音。</p>
-                        <br />
-
-                        <a href="#about-maps" data-toggle="modal">About Map</a> <span class="muted" style="margin: 10px; cursor: default;"> | </span> <a href="http://www.imlongluo.com/journey/" target="_blank">Life is a long journey. »</a>
+                <div class="span8">
+                    <!-- Content -->
+                    <div class="row">
+                        <!--  创造 Creativity  -->
+                        <div class="span8">
+                            <div class="block-left">
+                                <h1>创造</h1>
+                                <p class="wo">好奇心极重，兴趣爱好极为广泛，不管是生物学，心理学还是物理化学；</p>
+                                <p class="wo">从大二开始学习绘画、音乐，到现在仍然一事无成；</p>
+                                <br />
+                            </div>	
+                        </div>
                         
-                        <!-- Modal -->
-                        <div id="about-maps" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h3 id="myModalLabel">关于地图数据</h3>
+                        <!--  设计 Design  -->
+                        <div class="span4">
+                            <div class="design">
+                                <h3>设计</h3>
+                                <p class="wo">目前，发现网页设计是编程和设计的一个很好的结合点，所以我现在非常喜欢制作网站。</p> 
                             </div>
-                            
-                            <div class="modal-body">
-                            <p>地图数据来自 <a href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a></p>
-                            
-                            <hr class="soften">
-                            
-                            <h4>关于坐标点数据</h4>
-                            <p>地图中以红点标示的为曾到达过的地方，其中：</p>
-                            <ul>
-                                <li><p>这些地方都是我人生的重要经历，正是这些经历成就了我；</p></li>
-                                <li><p>所有坐标信息，均来源于在Google地图查询中到的该地方坐标；</p></li>
-                                <li><p>世界如此之大，我要体验更多；</p></li> 
-                                <li><p>最后更新时间：2013 年 11 月 27 日</p></li>
-							</ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                        </div>
+                        
+                        <!--  编程 Programming  -->
+                        <div class="span4">
+                            <div class="programming">
+                                <h3>编程</h3>
+                                <p class="wo">为Code而生，码Code为生计；码Code为乐趣，读Code以消忧；</p>
+                                <br />
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="span6">
-                    <div id="map"></div>
+                <div class="span4 relative">
+                    <!-- Carousel -->
+                    <div id="showcase" class="carousel slide screenshots">
+                        <div class="carousel-inner">
+                            <div class="active item">
+                            <img src="" class="screenshot-img">
+                            </div>
+                            <div class="item">
+                            <!--
+                            <img src="" class="iphone-mockup">
+                            -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    </article>
-<!-- ================================================================================            
-            <div class="span12 about">
-            	<div class="row">                    
-                    <div class="span6 offset3">
-                    	<h3 class="text-center">关于地图数据</h3>
-                        <p>地图中以红点标示的为我曾到达过的城市</p>
-                        <ul>
-                        	<li><p>地图数据来自 <a href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a></p></li>
-                            <li><p>若新到达的城市旁已有相邻的曾到达城市，且经度和（或）纬度相差小于 1° 的，仅标示最先到达的城市；</p></li>
-                            <li><p>2009 年或更早的坐标信息，来源于在 Google 地图 查询中到的该城市坐标，2010 年后的坐标信息来源于使用 iPhone 在当地所拍摄照片时所记录的 GPS 信息；</p></li>         
-                            <li><p>坐标点和其中所标出的到达年份为非完整数据。</p></li> 
-                            <li><p>最后更新时间：2014 年 2 月</p></li>
-                        </ul>
-                    </div>                   
+    
+    <!--  苹果 Apple  -->
+    
+    <section id="apple" class="row">
+        <div class="span12 panel relative">
+        	<img class="ribbon-apple" src="http://bcs.duapp.com/databank/images/ribbon-apple.png">
+            <div class="row">
+                <div class="span6">
+                	<img class="ipad-news" src="http://bcs.duapp.com/databank/images/mockedup-news.png">
+                </div>
+                
+                <div class="span6">
+                    <div class="padding-huge">
+                        <h1>Apple</h1>
+                        <p class="wo">我对 Apple 产品的热爱近乎狂热，是一名铁杆果粉。</p>
+                        <br />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="page-shadow" class="shadow shadow-main hide"></div>
--->
+    </section>
+
     
-    <script type="text/javascript">
-	$('#page-shadow').click(function(){
-		slideHeader();
-	});
+    <!--  关于我 About  --> 
 	
-	$('#link-to-world').hover(function(){
-		$('#link-to-world').tooltip('show');
-	});
+    <section id="about" class="row">
+   		<div class="span12 panel relative">
+   			<!--
+        	<img class="ribbon-apple" src="http://bcs.duapp.com/databank/images/ribbon-apple.png">
+        	-->
+        	<div class="row">
+                <div class="span6">
+                	<img class="ipad-news" src="http://databank.u.qiniudn.com/images/chahua_hunting_firebug.jpg">
+                </div>
+                
+                <div class="span6">
+                    <div class="padding-huge">
+                        <h1>关于我</h1>
+                        <p class="wo">世界之大，我却如此渺小，小时候没见过啥世面，长大后一直想去更多更远的地方；</p>
+                        <p class="wo">典型的不务正业者，常有奇思妙想；</p>
+                        <p class="wo">估计五年之内也成不了什么事，平庸之人而已；</p>
+                        <br />
+                        <a href="http://www.imlongluo.com/aboutme/index.html" target="_blank" class="btn btn-info btn-large button">点击了解我更多</a>
+                        <br>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </section>
 	
-	$('#link-to-china').hover(function(){
-		$('#link-to-china').tooltip('show');
-	});
-	
-	$('#link-to-america').hover(function(){
-		$('#link-to-america').tooltip('show');
-	});
-	
-	$('#link-to-europe').hover(function(){
-		$('#link-to-europe').tooltip('show');
-	});
-	</script>
+
+    <!--  联系 Contact  -->
     
+    <section id="contact" class="row">
+        <div class="span12 panel">
+            <div class="row">
+                <div class="span12">
+                    <div class="padding-large">
+                        <h1>联系</h1>
+                        <div class="muiti-contact">
+                            <span class="email">
+								<email data-toggle="tooltip" title="Email">Long Luo</email><at>@</at><sns data-toggle="tooltip" title="社交网络">imlongluo</sns><web data-toggle="tooltip" title="个人网站">.com</web>
+								</span>
+                            <!--[if lt IE 9]>
+                            <p class="text-warning">当前浏览器不支持该模块的交互效果，无法动态展示联系方式，建议换用更高级的浏览器。</p>
+                            <p class="text-info">Twitter, Instagram, Path, 新浪微博、腾讯微博和 微信的名称为@imlongluo</p>
+                            <![endif]-->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span12">
+                    <div class="padding-large">
+                        <div class="sns">
+                            <div class="sns-container">
+                                <a href="http://www.facebook.com/frankluo2005" target="_blank"><div id="icon-facebook" class="sns-icon" data-toggle="tooltip" title="Facebook"><img src="http://bcs.duapp.com/databank/images%2Fsns%2Ffacebook.png"></div></a>
+                                <a href="http://www.twitter.com/frankluo2005" target="_blank"><div id="icon-twitter" class="sns-icon" data-toggle="tooltip" title="Twitter"><img src="http://bcs.duapp.com/databank/images%2Fsns%2Ftwitter.png"></div></a>
+                                <a href="http://www.instagram.com/franluo2005" target="_blank"><div id="icon-instagram" class="sns-icon" data-toggle="tooltip" title="Instagram"><img src="http://bcs.duapp.com/databank/images%2Fsns%2Finstagram.png"></div></a>
+                                <a href="javascript:;" target="_blank"><div id="icon-path" class="sns-icon" data-toggle="tooltip" title="Path"><img src="http://bcs.duapp.com/databank/images%2Fsns%2Fpath.png"></div></a>
+                            </div>
+                            <div class="sns-container">              
+                                <a href="http://weibo.com/uniqueshine" target="_blank"><div id="icon-sinaweibo" class="sns-icon" data-toggle="tooltip" title="新浪微博"><img src="http://bcs.duapp.com/databank/images%2Fsns%2FSinaWeibo.png"></div></a>
+                                <a href="http://t.qq.com/wingoverair" target="_blank"><div id="icon-tencentweibo" class="sns-icon" data-toggle="tooltip" title="腾讯微博"><img src="http://bcs.duapp.com/databank/images%2Fsns%2FTencentWeibo.png"></div></a>
+                                <a href="http://www.imlongluo.com/" target="_blank"><div id="icon-wechat" class="sns-icon" data-toggle="tooltip" title="微信 imlongluo"><img src="http://bcs.duapp.com/databank/images%2Fsns%2Fwechat.png"></div></a>
+                                <a href="http://www.imlongluo.com/" target="_blank"><div id="icon-qq" class="sns-icon" data-toggle="tooltip" title="QQ 暂时保密"><img src="http://bcs.duapp.com/databank/images%2Fsns%2Fqq.png"></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </div>
+    </section>
+    
+     <!--  网站 website  -->
+
+    <section id="about" class="row">
+    	<div class="span12 panel text-center relative">
+       	 	<img class="ribbon-version" src="http://bcs.duapp.com/databank/images/ribbon-2013.png" alt="2013 版">
+			<div class="padding-large">
+                <h1>网站</h1>
+                <hr class="soften"> 
+                <p>当前你所看到的网站的版本为V6.7，借鉴了互联网很多资源，在此感谢他们。</p>
+                <p>网站采用栅格化<a href="http://www.responsinator.com/?url=www.imlongluo.com" target="_blank" title="看看这个网站在不同分辨率下的表现">响应式</a>布局，应用了多种实验性 CSS 元素和大量动画效果，</p>
+                <p>并支持 Retina 高清屏幕和 iOS Web App，还有基于 HTML 5 的离线缓存和 Canvas 绘图等技术。</p>
+                <p><a href="http://www.imlongluo.com/blog/" target="_blank" title="我的个人网站是怎么做出来的">详情 »</a></p>
+                <a href="http://www.responsinator.com/?url=www.imlongluo.com" target="_blank" title="看看这个网站在不同分辨率下的表现" alt="响应式布局">
+                <!--
+                <img class="img-responsive" src="http://databank.qiniudn.com/images/responsive.png" alt="响应式设计"></a>
+                -->
+                <p>因开发调试时间有限，无法保证各浏览器的兼容性，建议使用最新版本的 Chrome 或 Mac 版 Safari 浏览。</p>
+                <!--
+                <p>之前的三个版本已经在下方列出，有兴趣的可以看看我在这方面的成长之路。</p>
+                -->
+			</div>
+            
+                <div class="span12">
+                	<div class="padding-large" style="padding-top: 0;">
+                        <hr class="soften">
+                        <p>Designed and Developed By Long Luo.</p>
+                        <p>Copyright &copy; 2005 - 2014 Long Luo. All Rights Reserved.</p> 
+                        <div id="back-to-top">
+                            <svg id="rocket" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 64 64">
+                                <path fill="#CCCCCC" d="M42.057,37.732c0,0,4.139-25.58-9.78-36.207c-0.307-0.233-0.573-0.322-0.802-0.329
+                                c-0.227,0.002-0.493,0.083-0.796,0.311c-13.676,10.31-8.95,35.992-8.95,35.992c-10.18,8-7.703,9.151-1.894,23.262
+                                c1.108,2.693,3.048,2.06,3.926,0.115c0.877-1.943,2.815-6.232,2.815-6.232l11.029,0.128c0,0,2.035,4.334,2.959,6.298
+                                c0.922,1.965,2.877,2.644,3.924-0.024C49.974,47.064,52.423,45.969,42.057,37.732z M31.726,23.155
+                                c-2.546-0.03-4.633-2.118-4.664-4.665c-0.029-2.547,2.012-4.587,4.559-4.558c2.546,0.029,4.634,2.117,4.663,4.664
+                                C36.314,21.143,34.272,23.184,31.726,23.155z"/>
+                            </svg>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </section>
+   
 </article>
 
 <footer>
@@ -2514,5 +2678,18 @@ $.pjax({
     })
 </script>
 <p style="text-indent: -9999px;"><script src="http://s24.cnzz.com/stat.php?id=5620106&web_id=5620106" language="JavaScript"></script></p>
+
+
+<script type="text/javascript" src="http://databank.u.qiniudn.com/js/home.min.js"></script>
+
+<!-- Baidu Statistics -->
+<p style="text-indent: -9999px;"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb4c6c0df76415ca14358f56e0f957de1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</p>
+
+<!-- CNZZ Statistics -->
+<p style="text-indent: -9999px;"><script src="http://s22.cnzz.com/z_stat.php?id=1000135599&web_id=1000135599" language="JavaScript"></script></p>
 </body>
 </html>
