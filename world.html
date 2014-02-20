@@ -250,16 +250,9 @@ h1, h2, h3, h4, h5, p, span {
 .jumbotron .am-wrapper {
 	box-shadow: 0px 1px 3px 1.5px rgba(0, 0, 0, 0.4);
 	/* opacity: .8; */
-	/* 照片效果设置 */
-	 -webkit-transform: scale(2.5);
-		-moz-transform: scale(2.5);
-    		 transform: scale(2.5);
-	/*
-	 -webkit-transform: scale(1.1);
-		-moz-transform: scale(1.1);
-    		 transform: scale(1.1);
-    	*/
-    	/* 照片效果设置 */
+	-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
 }
 
 .jumbotron .am-wrapper:hover {
@@ -270,9 +263,16 @@ h1, h2, h3, h4, h5, p, span {
 	-ms-box-shadow:     0px 1px 8px 2px rgba(255, 255, 255, 0.8), 0px 5px 50px 10px rgba(255, 255, 255, 0.8);
 	-o-box-shadow:      0px 1px 8px 2px rgba(255, 255, 255, 0.8), 0px 5px 50px 10px rgba(255, 255, 255, 0.8);
 	box-shadow:         0px 1px 8px 2px rgba(255, 255, 255, 0.8), 0px 5px 50px 10px rgba(255, 255, 255, 0.8);	
+	/* 照片效果设置 */
+	 -webkit-transform: scale(2.5);
+		-moz-transform: scale(2.5);
+    		 transform: scale(2.5);
+	/*
 	 -webkit-transform: scale(1.1);
 		-moz-transform: scale(1.1);
     		 transform: scale(1.1);
+    	*/
+    	/* 照片效果设置 */
 }
 
 #handle {
@@ -644,7 +644,10 @@ footer {
 <div id="header-camarts-entry" class="navbar navbar-inverse hide">
     <div class="navbar-inner">
         <div class="container">
-        	<a href="http://williamlfang.github.io/cn/" target="_blank">Explore More »</a>
+        <br/>
+        	<a href="http://williamlfang.github.io/en/" target="_blank">Explore More »</a>
+        	<br/>
+        	<br/>
         </div>
     </div>
 </div>
@@ -865,16 +868,19 @@ footer {
 <article id="content" class="main">	<div class="side-shadow left"></div>
     <div class="side-shadow right"></div>
     
-	<nav class="main-nav">
+    	<nav class="main-nav">
         <ul class="nav nav-tabs nav-maps">
-            <li><a id="link-to-china" href="http://williamlfang.github.io/" title="China" pjax-title="William" data-toggle="tooltip">CN</a></li>
+            <li>
+                <a id="link-to-china" href="javascript:;" href="http://williamlfang.github.io/" title="Change to China Map" data-toggle="tooltip">CN</a>
+            </li>
             <li class="active">
-                <a id="link-to-world" href="javascript:;" data-toggle="tooltip">WO</a>
+            	<a id="link-to-world" href="javascript:;" data-toggle="tooltip">Wo</a>
             </li>
             <li class="disabled"><a id="link-to-america" href="javascript:;" title="暂未开放" data-toggle="tooltip">US</a></li>
             <li class="disabled"><a id="link-to-europe" href="javascript:;" title="暂未开放" data-toggle="tooltip">EU</a></li>
         </ul>
     </nav>
+
     
 <!--地图数据在 /media/main/js/map-data-china-full.js-->
     <div class="container">
