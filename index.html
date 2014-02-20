@@ -871,24 +871,25 @@ footer {
     
     <!--地图数据在 /media/main/js/map-data-china-full.js-->
     <div class="container">
+    	<div class="row">      
         	<div class="span12">  
                 <div id="map"></div>
                 <script type="text/javascript" src="/media/main/js/map-data-china-full.js"></script>
             </div>
-   <!-- 地图数据在 /media/main/js/map-data-china-full.js -->        
+            
             <div class="span12 about">
             	<div class="row">                    
                     <div class="span6 offset3">
                     	<h3 class="text-center">关于地图数据</h3>
-                        <p>地图中以红点标示的为我曾到达过的城市或地区</p>
+                        <p>地图中以红点标示的为我曾到达过的城市</p>
                         <ul>
                         	<li><p>地图数据来自 <a href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a></p></li>
-                            <li><p>为避免坐标点过于密集，该世界地图中各国家和地区只标示其主要城市或有特殊意义的城市；</p></li>
+                            <li><p>若新到达的城市旁已有相邻的曾到达城市，且经度和（或）纬度相差小于 1° 的，仅标示最先到达的城市；</p></li>
                             <li><p>2009 年或更早的坐标信息，来源于在 Google 地图 查询中到的该城市坐标，2010 年后的坐标信息来源于使用 iPhone 在当地所拍摄照片时所记录的 GPS 信息；</p></li>         
-                            <li><p>切换至相应国家或地区的地图可查看完整的数据（如 <a href="http://travel.dandyweng.com/china/" title="切换到中国地图" pjax-title="旅行足迹 · 翁天信 Dandy Weng">中国</a>）；</p></li> 
-                            <li><p>最后更新时间：2013 年 7 月</p></li>
+                            <li><p>坐标点和其中所标出的到达年份为非完整数据。</p></li> 
+                            <li><p>最后更新时间：2014 年 2 月</p></li>
                         </ul>
-                    </div>          
+                    </div>                   
                 </div>
             </div>
         </div>
@@ -920,7 +921,9 @@ footer {
 </article>
 
 <footer>
+<!-- 
 <p>Designed and Developed by Dandy Weng. BY-NC-SA License.</p>
+-->
 <p>Copyright &copy; 2013 - 2014 <a href="http://williamlfang.github.com">William Fang</a>. All Rights Reserved.</p>
 </footer>
 
