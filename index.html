@@ -1173,16 +1173,192 @@ only screen and (                min-resolution: 2dppx) {
 /* --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
-/* = 部件 Components
+
+/* = 框架 Panels
+----------------------------------------------- */
+.panel {
+	display: none;
+	background: #FFF url("http://bcs.duapp.com/databank/images%2Fpatterns%2Fwhite_wall_hash.jpg");
+	padding: 0px;
+	margin-bottom: 120px;
+	color: #333;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	/*
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0, .075);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	*/
+	-webkit-animation: panel-in 1s linear 0 1;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+}
+.panel h1, .panel h3 {
+	cursor: default;
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+.panel h3 {
+	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
+}
+/*
+.panel h1:hover {
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+	-webkit-transform: translateY(-5px);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+*/
+.panel-description {
+	background: rgba(255, 255, 255, 0.80);
+	color: #333;
+	padding: 0px;
+	margin-bottom: 80px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	text-shadow: 1px 1px 2px #FFF;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05); 
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);  
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
+}
+.panel-description h3 {
+	font: 500 18px/1.8 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
+}
+.panel-description h4 {
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 14.5px;
+	line-height: 1.5;
+}
+.button-text-panel a {
+	position: relative;
+	margin: 10px;
+}
+.block-left {
+	padding: 35px 10px 15px 45px
+}
+.design {
+	padding: 0 5px 15px 45px;
+}
+.programming {
+	padding: 0 20px 10px 0;
+}
+
+
+/* = 字体渲染 Fonts
+----------------------------------------------- */
+/*
+@font-face {
+	font-family: Minion;
+	src: url(/fonts/MinionPro-Semibold.otf);
+}
+*/
+
+
+
+/* = 响应式 Responsive
+----------------------------------------------- */
+/* = 框架 Panels
+----------------------------------------------- */
+.panel {
+	display: none;
+	background: #FFF url("http://bcs.duapp.com/databank/images%2Fpatterns%2Fwhite_wall_hash.jpg");
+	padding: 0px;
+	margin-bottom: 120px;
+	color: #333;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	/*
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0, .075);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	*/
+	-webkit-animation: panel-in 1s linear 0 1;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+}
+.panel h1, .panel h3 {
+	cursor: default;
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+.panel h3 {
+	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
+}
+/*
+.panel h1:hover {
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+	-webkit-transform: translateY(-5px);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+
+
+/* = 字体渲染 Fonts
+----------------------------------------------- */
+/*
+@font-face {
+	font-family: Minion;
+	src: url(/fonts/MinionPro-Semibold.otf);
+}
+*/
+
+/* = IE 8 以下 IE 8 or below
+----------------------------------------------- */
+
+.ie-alert {
+	position: fixed;
+	top: 50px;
+	width: 630px;
+	z-index: 9999;	
+}
+#ie8 .panel-description {
+	background: #FFF url("http://bcs.duapp.com/databank/images%2Fpatterns%2Fwhite_wall_hash.jpg");	
+}
+#ie8 .hover {
+	color: #000;
+}
+#ie8 .fadeout {
+	color: #CCC;
+}
+
+/* = 响应式 Responsive
 ----------------------------------------------- */
 .nav a {
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	transition: 500ms;
 }
-header {
-	margin-top: 40px;	
-}
+
+
 .hero-unit {
 	position: relative;
 	background: url("http://databank.u.qiniudn.com/images/hawaii_ship.jpg");
@@ -1583,122 +1759,8 @@ a.thumbnail small {
 #back-to-top #rocket {
     margin-top: 7px;
 }
-/* = 框架 Panels
------------------------------------------------ */
-.panel {
-	display: none;
-	background: #FFF url("http://bcs.duapp.com/databank/images%2Fpatterns%2Fwhite_wall_hash.jpg");
-	padding: 0px;
-	margin-bottom: 120px;
-	color: #333;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	/*
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0, .075);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
-	*/
-	-webkit-animation: panel-in 1s linear 0 1;
-	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-}
-.panel h1, .panel h3 {
-	cursor: default;
-	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
-	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
-}
-.panel h3 {
-	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
-}
-/*
-.panel h1:hover {
-	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
-	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;	
-	-webkit-transform: translateY(-5px);
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
-}
-*/
-.panel-description {
-	background: rgba(255, 255, 255, 0.80);
-	color: #333;
-	padding: 0px;
-	margin-bottom: 80px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	text-shadow: 1px 1px 2px #FFF;
-	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05); 
-	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);  
-	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-}
-.panel-description h3 {
-	font: 500 18px/1.8 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
-}
-.panel-description h4 {
-	color: rgba(0, 0, 0, 0.7);
-	font-size: 14.5px;
-	line-height: 1.5;
-}
-.button-text-panel a {
-	position: relative;
-	margin: 10px;
-}
-.block-left {
-	padding: 35px 10px 15px 45px
-}
-.design {
-	padding: 0 5px 15px 45px;
-}
-.programming {
-	padding: 0 20px 10px 0;
-}
 
 
-/* = 字体渲染 Fonts
------------------------------------------------ */
-/*
-@font-face {
-	font-family: Minion;
-	src: url(/fonts/MinionPro-Semibold.otf);
-}
-*/
-
-/* = IE 8 以下 IE 8 or below
------------------------------------------------ */
-
-.ie-alert {
-	position: fixed;
-	top: 50px;
-	width: 630px;
-	z-index: 9999;	
-}
-#ie8 .panel-description {
-	background: #FFF url("http://bcs.duapp.com/databank/images%2Fpatterns%2Fwhite_wall_hash.jpg");	
-}
-#ie8 .hover {
-	color: #000;
-}
-#ie8 .fadeout {
-	color: #CCC;
-}
-
-/* = 响应式 Responsive
------------------------------------------------ */
 /* --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 </style>
 </head>
@@ -1715,6 +1777,7 @@ a.thumbnail small {
     </div>
 </div>
 
+
 <header id="header" class="jumbotron jumbotron-shadow">
     <div id="header-text" class="container header-elements">
         <h1 id="title" class="header-elements"><img class="profile img-circle loading" src="/assets/images/title.png" width="120" height="40"></h1>
@@ -1724,7 +1787,6 @@ a.thumbnail small {
         -->
 <a id="website-link" href="http://williamlfang.github.io/cn/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">中文版 »</a>  OR <a id="website-link" href="http://williamlfang.github.io/en/" class="lead-link text-center" target="_blank" title="More About Me" data-toggle="tooltip" data-placement="bottom" >English »</a></p>
 	</div>
-
 
 	
     <div class="am-container under blur" id="am-container">
@@ -2234,6 +2296,63 @@ a.thumbnail small {
     <div id="page-shadow" class="shadow shadow-main hide"></div>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
+<div class="shadow"></div>
+<article class="container"> 
+
+    
+    <!--  旅行 Travel  -->
+
+
+    <section id="travel" class="row">
+        <div class="span12 panel">
+            <div class="row">
+                <div class="span6">
+                    <div class="block-left">
+                        <h1>旅行</h1>
+                        <p class="wo">What is a journey? A journey is not a trip. It's not a vacation. It's a process. A Discovery. It's a process of self-discovery. </p>
+                        <br />
+                        <p class="wo">A journey brings us face to face with ourselves. A journey shows us not only the world, but how we fit in it. Does the person create the journey or does the journey create the person? The journey is life itself. Where will life take you? </p>
+                        <br />
+                        <p class="wo">如果不去接触未知，我们的感觉将变得迟钝，我们的世界就那么小小的一点儿，就连好奇心也将消失不见。我们的目光将不再放眼远方的地平线，耳朵也听不到那些熟悉的声音。</p>
+                        <br />
+
+                        <a href="#about-maps" data-toggle="modal">About Map</a> <span class="muted" style="margin: 10px; cursor: default;"> | </span> <a href="http://www.imlongluo.com/journey/" target="_blank">Life is a long journey. »</a>
+                        
+                        <!-- Modal -->
+                        <div id="about-maps" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel">关于地图数据</h3>
+                            </div>
+                            
+                            <div class="modal-body">
+                            <p>地图数据来自 <a href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a></p>
+                            
+                            <hr class="soften">
+                            
+                            <h4>关于坐标点数据</h4>
+                            <p>地图中以红点标示的为曾到达过的地方，其中：</p>
+                            <ul>
+                                <li><p>这些地方都是我人生的重要经历，正是这些经历成就了我；</p></li>
+                                <li><p>所有坐标信息，均来源于在Google地图查询中到的该地方坐标；</p></li>
+                                <li><p>世界如此之大，我要体验更多；</p></li> 
+                                <li><p>最后更新时间：2013 年 11 月 27 日</p></li>
+							</ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span6">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </article>
 <!-- ================================================================================            
             <div class="span12 about">
             	<div class="row">                    
