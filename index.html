@@ -1275,61 +1275,7 @@ only screen and (                min-resolution: 2dppx) {
 ----------------------------------------------- */
 /* = 框架 Panels
 ----------------------------------------------- */
-.panel {
-	display: none;
-	background: #FFF url("http://bcs.duapp.com/databank/images%2Fpatterns%2Fwhite_wall_hash.jpg");
-	padding: 0px;
-	margin-bottom: 120px;
-	color: #333;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	/*
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0, .075);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
-	*/
-	-webkit-animation: panel-in 1s linear 0 1;
-	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-}
-.panel h1, .panel h3 {
-	cursor: default;
-	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
-	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
-}
-.panel h3 {
-	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
-}
-/*
-.panel h1:hover {
-	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
-	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;	
-	-webkit-transform: translateY(-5px);
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
-}
 
-
-/* = 字体渲染 Fonts
------------------------------------------------ */
-/*
-@font-face {
-	font-family: Minion;
-	src: url(/fonts/MinionPro-Semibold.otf);
-}
-*/
 
 /* = IE 8 以下 IE 8 or below
 ----------------------------------------------- */
@@ -1456,6 +1402,8 @@ only screen and (                min-resolution: 2dppx) {
 	border-top: 1px solid #e0e0e0;	
 	z-index: -999;
 }
+
+/* 双击 鼠标 
 img.profile {
 	max-width: 380px;
 	margin-top: 5px;
@@ -1468,6 +1416,8 @@ img.profile {
 	-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
 }
+  双击 鼠标 */
+
 img.profile:hover {
 	-webkit-animation: profile-img-hover 1000ms ease-out 100ms infinite forwards;
 }
@@ -1765,7 +1715,43 @@ a.thumbnail small {
 </style>
 </head>
 
+
 <body  data-spy="scroll" data-target=".navbar" onload="completed();" ontouchstart="">
+
+<div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+    
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#banner">简述</a></li>
+                    <li><a href="#travel">旅行</a></li>
+					<!--
+					<li><a href="#writing">写作</a></li>
+					<li><a href="#music">音乐</a></li>
+		            <li><a href="#photography">摄影</a></li>
+					-->
+		            <li><a href="#creativity">创造</a></li>
+		            <li><a href="#contact">联系</a></li>
+			<li><a href="#about">关于我</a></li>
+                </ul>
+            </div>
+        
+            <ul class="nav">
+		        <li><a href="http://www.imlongluo.com/blog" target="_blank">博客</a></li>
+		        <li><a href="http://weibo.com/uniqueshine" target="_blank">微博</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
 <div id="header-camarts-entry" class="navbar navbar-inverse hide">
     <div class="navbar-inner">
         <div class="container">
@@ -1785,8 +1771,8 @@ a.thumbnail small {
         A Personal Website<br>
         <!-- <a id="website-link" href="http://williamlfang.github.io/cn/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">进入我的个人网站 »</a></p>
         -->
-<a id="website-link" href="http://williamlfang.github.io/cn/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">中文版 »</a>  OR <a id="website-link" href="http://williamlfang.github.io/en/" class="lead-link text-center" target="_blank" title="More About Me" data-toggle="tooltip" data-placement="bottom" >English »</a></p>
-	</div>
+           <a id="website-link" href="http://williamlfang.github.io/cn/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">中文版 »</a>  OR <a id="website-link" href="http://williamlfang.github.io/en/" class="lead-link text-center" target="_blank" title="More About Me" data-toggle="tooltip" data-placement="bottom" >English »</a></p>
+   </div>
 
 	
     <div class="am-container under blur" id="am-container">
@@ -2242,6 +2228,7 @@ a.thumbnail small {
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 	<span class="montage-copyright">随机展示墙 <a href="javascript:;" onclick="javascript:window.location.reload()">刷新页面换一换</a> | <a href="http://williamlfang.github.io/cn/" target="_blank">&copy;2013-2014</a> <a href="http://williamlfang.github.io/cn/" target="_blank">William Fang&reg;</a></span>
     </div>
+
     <div id="header-shadow" class="shadow"></div>
     <div id="handle" class="hide">
 		<a href="javascript:;"><img id="handle-chevron" src="/assets/images/chevron.png"></a>
@@ -2275,28 +2262,50 @@ a.thumbnail small {
         	<div class="span12">  
                 <div id="map"></div>
                 <script type="text/javascript" src="/media/main/js/map-data-china-full.js"></script>
+                <h4 class="text-center">最后更新时间：2014 年 2 月 </h4>
             </div>
-    
  
-	<!--   Remove this module.  -->
-    <!--  写作 Writing  -->
-    <!--
-    <section id="writing" class="row">
-   		<div class="span12 panel">
-        	<div class="row">
-                <div class="span8">
+ <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="span12 about">
+            	<div class="row">                    
+                    <div class="span6 offset3">
+                    	<h3 class="text-center">To My Dear </h3>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page-shadow" class="shadow shadow-main hide"></div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->   
 
-                <div class="span4">
+<article class="container"> 
+
+
+    <!--  写作 Writing: BEGIN-->
+
+    <section id="writing" class="row">
+   	<div class="span12 panel">
+        	<div class="row">
+            <div class="span6">
                 	<div class="padding-large">
                         <h1>写作</h1>
-                        <p class="wo">我喜欢写作</p>
+                         <p>喜悦的伤感,还有忧郁的欢乐,就像孩童时代的田字格,简单地交错杂织.</a></p>
+                          <p>我却一直都认为它们是最复杂的星象图,自己似乎永远也写不好那些脆弱的线条,悟不透那些擦破天际的逆轨.</p>
+                          <p>还有很多的事,已经不能完成的,没能想要完成的,还有来不及完成的,就像纯洁的田字格.</p>    
+                          <p>想好好写下灿烂如莲花绽放.</p>
                         <a href="http://www.imlongluo.com/blog/" target="_blank" class="btn btn-info btn-large button">我的一些随笔</a>
-                    </div>
+                      </div>                 
+            </div>
+
+               <div class="span6">
+                	<img class="ipad-news" src="http://databank.u.qiniudn.com/images/chahua_hunting_firebug.jpg">
                 </div>
-			</div>
-		</div>
+
+	</div>
+	</div>
     </section>
-	-->
+
+ <!--  写作 Writing: END-->
 
 	<!--   Remove this module.  -->
     <!--  音乐 Music  -->
@@ -2317,7 +2326,7 @@ a.thumbnail small {
 
 	<!--   Remove this module.   -->
     <!--  摄影 Photography  -->
-    <!--
+
     <section id="photography" class="row">
    		<div class="span12 panel">
         	<div class="row">
@@ -2337,7 +2346,6 @@ a.thumbnail small {
                             <li data-target="#photograph" data-slide-to="9"></li>
                         </ol>
                         
-						// Carousel items 
                         <div class="carousel-inner">
                             <div class="active item"><a href="http://www.camarts.cn/archives/549.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://databank.qiniudn.com/images/carousel/carousel-01.jpg"></a></div>
                             <div class="item"><a href="http://www.camarts.cn/archives/523.html" title="在 Camarts™ 中浏览" target="_blank"><img src="http://dandyweng.qiniudn.com/images/carousel/carousel-02.jpg"></a></div>
@@ -2368,9 +2376,7 @@ a.thumbnail small {
 			</div>
 		</div>
     </section>
-	-->
-    
-    <!--  创造 Creativity  -->
+
 
     <section id="creativity" class="row">
         <div class="span12 panel">
@@ -2379,7 +2385,7 @@ a.thumbnail small {
                     <!-- Content -->
                     <div class="row">
                         <!--  创造 Creativity  -->
-                        <div class="span8">
+                        <div class="span6">
                             <div class="block-left">
                                 <h1>创造</h1>
                                 <p class="wo">好奇心极重，兴趣爱好极为广泛，不管是生物学，心理学还是物理化学；</p>
@@ -2421,31 +2427,14 @@ a.thumbnail small {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <!--  苹果 Apple  -->
-    
-    <section id="apple" class="row">
-        <div class="span12 panel relative">
-        	<img class="ribbon-apple" src="http://bcs.duapp.com/databank/images/ribbon-apple.png">
-            <div class="row">
-                <div class="span6">
-                	<img class="ipad-news" src="http://bcs.duapp.com/databank/images/mockedup-news.png">
-                </div>
-                
-                <div class="span6">
-                    <div class="padding-huge">
-                        <h1>Apple</h1>
-                        <p class="wo">我对 Apple 产品的热爱近乎狂热，是一名铁杆果粉。</p>
-                        <br />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
+                 <div class="span4">
+                	<img class="ipad-news" src="http://databank.u.qiniudn.com/images/chahua_hunting_firebug.jpg">
+                </div>
+
+            </div>
+        </div>
+    </section>
     
     <!--  关于我 About  --> 
 	
@@ -2516,50 +2505,8 @@ a.thumbnail small {
 			</div>
         </div>
     </section>
-    
-     <!--  网站 website  -->
-
-    <section id="about" class="row">
-    	<div class="span12 panel text-center relative">
-       	 	<img class="ribbon-version" src="http://bcs.duapp.com/databank/images/ribbon-2013.png" alt="2013 版">
-			<div class="padding-large">
-                <h1>网站</h1>
-                <hr class="soften"> 
-                <p>当前你所看到的网站的版本为V6.7，借鉴了互联网很多资源，在此感谢他们。</p>
-                <p>网站采用栅格化<a href="http://www.responsinator.com/?url=www.imlongluo.com" target="_blank" title="看看这个网站在不同分辨率下的表现">响应式</a>布局，应用了多种实验性 CSS 元素和大量动画效果，</p>
-                <p>并支持 Retina 高清屏幕和 iOS Web App，还有基于 HTML 5 的离线缓存和 Canvas 绘图等技术。</p>
-                <p><a href="http://www.imlongluo.com/blog/" target="_blank" title="我的个人网站是怎么做出来的">详情 »</a></p>
-                <a href="http://www.responsinator.com/?url=www.imlongluo.com" target="_blank" title="看看这个网站在不同分辨率下的表现" alt="响应式布局">
-                <!--
-                <img class="img-responsive" src="http://databank.qiniudn.com/images/responsive.png" alt="响应式设计"></a>
-                -->
-                <p>因开发调试时间有限，无法保证各浏览器的兼容性，建议使用最新版本的 Chrome 或 Mac 版 Safari 浏览。</p>
-                <!--
-                <p>之前的三个版本已经在下方列出，有兴趣的可以看看我在这方面的成长之路。</p>
-                -->
-			</div>
-            
-                <div class="span12">
-                	<div class="padding-large" style="padding-top: 0;">
-                        <hr class="soften">
-                        <p>Designed and Developed By Long Luo.</p>
-                        <p>Copyright &copy; 2005 - 2014 Long Luo. All Rights Reserved.</p> 
-                        <div id="back-to-top">
-                            <svg id="rocket" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 64 64">
-                                <path fill="#CCCCCC" d="M42.057,37.732c0,0,4.139-25.58-9.78-36.207c-0.307-0.233-0.573-0.322-0.802-0.329
-                                c-0.227,0.002-0.493,0.083-0.796,0.311c-13.676,10.31-8.95,35.992-8.95,35.992c-10.18,8-7.703,9.151-1.894,23.262
-                                c1.108,2.693,3.048,2.06,3.926,0.115c0.877-1.943,2.815-6.232,2.815-6.232l11.029,0.128c0,0,2.035,4.334,2.959,6.298
-                                c0.922,1.965,2.877,2.644,3.924-0.024C49.974,47.064,52.423,45.969,42.057,37.732z M31.726,23.155
-                                c-2.546-0.03-4.633-2.118-4.664-4.665c-0.029-2.547,2.012-4.587,4.559-4.558c2.546,0.029,4.634,2.117,4.663,4.664
-                                C36.314,21.143,34.272,23.184,31.726,23.155z"/>
-                            </svg>
-                        </div>
-                    </div>              
-                </div>
-            </div>
-        </div>
-    </section>
-   
+  </article>  
+ 
 </article>
 
 <footer>
@@ -2680,7 +2627,7 @@ $.pjax({
 <p style="text-indent: -9999px;"><script src="http://s24.cnzz.com/stat.php?id=5620106&web_id=5620106" language="JavaScript"></script></p>
 
 
-<script type="text/javascript" src="http://databank.u.qiniudn.com/js/home.min.js"></script>
+<script type="text/javascript" src="/media/main/js/home.min.js"></script>
 
 <!-- Baidu Statistics -->
 <p style="text-indent: -9999px;"><script type="text/javascript">
