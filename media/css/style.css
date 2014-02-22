@@ -98,7 +98,7 @@ blockquote p{margin:0;padding:.5em 0;}
 
 */
 
-#container{width:680px;margin:2em auto;display:block;padding:0 2em;}           /* 页面大小*/
+#container{width:680px;margin:4em auto;display:block;padding:0 2em;}           /* 页面大小: margin 是 顶部的距离*/
 .content{font-size:16px;line-height:24px;}
 .content h1{padding:.5em 0;}
 /*
@@ -123,6 +123,9 @@ nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercas
 nav a{display:block;padding:.7em 1em;color:#000000;}
 nav a:hover{background-color:#ff0000;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
 .post{padding:.5em 0em;}
+
+.post h2{display:block;margin-top:10px;padding:4px 0 4px 10px;border-top:1px dashed #91895b;border-left:3px solid #dd0000;border-bottom:1px dashed #91895b;padding:5px;font-size:1.4em;font-family:Verdana,"BitStream vera Sans";color:#284259;}
+
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.8em;color:#000;}
 h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;
    margin: 30px 0px 10px; padding: 0px; border-bottom: 1px dashed #cccccc;}  
