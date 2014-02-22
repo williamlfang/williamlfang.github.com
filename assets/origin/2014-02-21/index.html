@@ -11,20 +11,9 @@
 ==================================================================================
 	Copyright (C) 2005 - 2013 Long Luo. All Rights Reserved.
 	Version: 3.0
-	Modified by Long Luo @December 23th, 2013 at Shenzhen, China.
+	Modified by William Fang @Febuary, 2014, Xiamen, China
 -->
 
-<!--
-<script type="text/javascript">
-	var retina = 'retina='+ window.devicePixelRatio +';'+ retina;
-	var screenwidth = 'screenwidth='+ window.screen.width;
-	document.cookie = retina;
-	document.cookie = screenwidth;
-	if(window.devicePixelRatio > 1){
-		document.location.reload(true);
-	}
-</script>
--->
 
 <!DOCTYPE html>
 <!--[if IE]>
@@ -37,14 +26,6 @@
 <meta charset="UTF-8">
 <title>旅行足迹 · William Fang</title>
 
-<!-- 
-<meta name="Description" content="翁天信（Dandy Weng）的旅行足迹。我是一个爱旅行的人，每年有将近四分之一的时间都在路上。我 18 岁前就在大半个中国留下了足迹。走遍世界周游列国，对我而言并不止于是个梦想而已。" />
-<meta name="keywords" content="翁天信,Dandy Weng" />
-<meta name="Author" contect="Dandy Weng" / >
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
-<meta name="format-detection" content="telephone=no" />
-<meta name="apple-mobile-web-app-title" content="旅行足迹" />
--->
 <link rel="apple-touch-icon-precomposed" url("/assets/images/favicon.png")/>			  <!-- ====== Icon  -->
 <link rel="shortcut icon" href="/assets/images/favicon.ico" />
 <link rel="icon" href="/assets/images/favicon.ico" />
@@ -317,7 +298,7 @@ hr.soften {
 }
 
 #handle-chevron {
-	width: 80px;    /* 中间滑开的位置*/
+	width: 100px;    /*----------------------------------------------------------------------------------------- 中间滑开的位置*/
 	opacity: .8;      /* 透明化程度*/
 }
 
@@ -339,6 +320,7 @@ hr.soften {
 	color: rgba(255, 255, 255, 0.7);
 }
 
+/* 照片墙显示时其他部分变暗 */
 .shadow {
 	top: 0;
 	width: 100%;
@@ -1262,13 +1244,6 @@ only screen and (                min-resolution: 2dppx) {
 */
 
 
-
-/* = 响应式 Responsive
------------------------------------------------ */
-/* = 框架 Panels
------------------------------------------------ */
-
-
 /* = IE 8 以下 IE 8 or below
 ----------------------------------------------- */
 
@@ -1695,13 +1670,74 @@ a.thumbnail small {
     margin-top: 7px;
 }
 
+/* Back to top ==================================================================================*/
+a#go-top {
+  width:50px;
+  height:50px;
+  text-decoration:none;
+  opacity:0.5;
+  background: url("/assets/images/back-top.png") no-repeat scroll 0 0 transparent;
+}
+a#go-top:hover {
+  background-position: -50px 0
+}
 
+.back-to {
+  bottom: 35px;
+  overflow: hidden;
+  position: fixed;
+  right: 10px;
+  width: 110px;
+  z-index: 999;
+}
+.back-to .back-top {
+  background: url("/assets/images/back-top.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  float: right;
+  height: 50px;
+  margin-left: 10px;
+  outline: 0 none;
+  text-indent: -9999em;
+  width: 50px;
+}
+.back-to .back-top:hover {
+  background-position: -50px 0
+}
+/************************************************************************************
 /* --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 </style>
 </head>
 
+  <!--=================================================================== -->
+    <script type="text/javascript">
+    $(document).ready(function () {
+        var bt = $('#toolBackTop');
+        var sw = $(document.body)[0].clientWidth;
+
+        var limitsw = (sw - 840) / 2 - 300;
+        if (limitsw > 0){
+                limitsw = parseInt(limitsw);
+                bt.css("right",limitsw);
+        }
+
+        $(window).scroll(function() {
+                var st = $(window).scrollTop();
+                if(st > 30){
+                        bt.show();
+                }else{
+                        bt.hide();
+                }
+        });
+    })
+    </script>
+  <!--=================================================================== -->
+
 
 <body  data-spy="scroll" data-target=".navbar" onload="completed();" ontouchstart="">
+
+        <div style="display:none;" class="back-to" id="toolBackTop">
+          <a title="返回顶部" onclick="window.scrollTo(0,0);return false;" href="#top" class="back-top" data-toggle="tooltip" data-placement="bottom">返回顶部</a>
+        </div>
 
 <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
@@ -1721,10 +1757,10 @@ a.thumbnail small {
 					<li><a href="#music">音乐</a></li>
 		            <li><a href="#photography">摄影</a></li>
 					-->
-			 <li><a href="#photography">摄影</a></li>
-		            <li><a href="#creativity">创造</a></li>	          
-			<li><a href="#about">关于我</a></li>
-			<li><a href="#contact">联系</a></li>
+		<li><a href="#photography">摄影</a></li>
+		<li><a href="#creativity">创造</a></li>	          
+		<li><a href="#about">关于我</a></li>
+		<li><a href="#contact">联系</a></li>
                 </ul>
             </div>
         
@@ -1757,21 +1793,14 @@ a.thumbnail small {
         A Personal Website<br>
         <!-- <a id="website-link" href="http://williamlfang.github.io/cn/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">进入我的个人网站 »</a></p>
         -->
-           <a id="website-link" href="http://williamlfang.github.io/cn/" class="lead-link text-center" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="bottom">中文版 »</a>  <strong> / </strong> <a id="website-link" href="http://williamlfang.github.io/en/" class="lead-link text-center" target="_blank" title="More About Me" data-toggle="tooltip" data-placement="bottom" >English »</a></p>
+          <a id="website-link" href="http://williamlfang.github.io/cn" target="_blank" title="了解关于我的一切" data-toggle="tooltip" data-placement="left" class="lead-link text-center">中文版 »</a>
+          	<strong> / </strong>
+           <a id="website-link" href="http://williamlfang.github.io/en" target="_blank" title="Learn More" data-toggle="tooltip" data-placement="bottom" class="lead-link text-center">English »</a>
+
    </div>
 
-	
-    <div class="am-container under blur" id="am-container">
- <!-- ===================================================================================-->
-<!--------------------------------------------------------------------------------------------------	
-<a id='img_50' href='http://www.camarts.cn/archives/1282.html' title='《鹅銮鼻》台湾' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='http://dw-travel.u.qiniudn.com/images/montage/50.jpg?imageMogr/v2/quality/80'></a>
 
-			<script>
-			$('#img_50').hover(function(){
-				$('#img_50').tooltip('show');
-			});
-			</script>
------------------------------------------------------------------------------------------------ -->	
+<div class="am-container under blur" id="am-container">
 <!-- ===================================================================================-->
 <a id='img_57' href='http://user.qzone.qq.com/564985882/4' title='「咪豆」厦门' target='_blank' data-toggle='tooltip' data-placement='bottom'><img src='/assets/images/imgs/psb.jpg'></a>
 
@@ -2213,62 +2242,73 @@ a.thumbnail small {
 			</script>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 	<span class="montage-copyright">随机展示墙 <a href="javascript:;" onclick="javascript:window.location.reload()">刷新页面换一换</a> | <a href="http://williamlfang.github.io/cn/" target="_blank">&copy;2013-2014</a> <a href="http://williamlfang.github.io/cn/" target="_blank">William Fang&reg;</a></span>
-    </div>
+</div>
 
     <div id="header-shadow" class="shadow"></div>
+
     <div id="handle" class="hide">
-		<a href="javascript:;"><img id="handle-chevron" src="/assets/images/chevron.png"></a>
+	<a href="javascript:;"><div id="icon-path"  title="Click to See More." data-toggle='tooltip' data-placement='bottom'><img id="handle-chevron" src="/assets/images/chevron.png"></div></a>
+</header> 
     </div>
-</header>
 
 <div id="loading" class="text-center">
-    <img class="spinner" src="/assets/images/spinner.gif">
-    <span>加载中</span>
+    <img class="spinner" src="/images/spinner.gif">
+    <span>加载中</span>t
 </div>
 
 <div class="shadow"></div>
 
-<article id="content" class="main">	<div class="side-shadow left"></div>
-    <div class="side-shadow right"></div>
+<article id="content" class="main">	
+
+   <div class="side-shadow left">
+   </div>
     
-	<nav class="main-nav">
+   <div class="side-shadow right">
+   </div>
+    
+    <nav class="main-nav">
         <ul class="nav nav-tabs nav-maps">
             <li class="active">
-                <a id="link-to-china" href="javascript:;" data-toggle="tooltip">中国</a>
+                <a id="link-to-china" href="javascript:;" title="我的祖国" data-toggle="tooltip" class="lead-link text-center" data-placement="bottom">中国</a>
             </li>
-            <li><a id="link-to-world" href="http://williamlfang.github.io/world.html" title="切换到世界地图" pjax-title="旅行足迹 " data-toggle="tooltip">世界</a></li>
-            <li class="disabled"><a id="link-to-america" href="javascript:;" title="暂未开放" data-toggle="tooltip">美洲</a></li>
-            <li class="disabled"><a id="link-to-europe" href="javascript:;" title="暂未开放" data-toggle="tooltip">欧洲</a></li>
+            <li>
+            	<a id="link-to-world" href="http://williamlfang.github.io/world.html" title="切换到世界地图" pjax-title="旅行足迹" data-toggle="tooltip" data-placement="bottom">世界</a>
+            </li>
+            <li class="disabled">
+            	<a id="link-to-america" href="javascript:;" title="暂未开放" data-toggle="tooltip" data-placement="bottom">美洲</a>
+            </li>
+            <li class="disabled">
+            	<a id="link-to-europe" href="javascript:;" title="暂未开放" data-toggle="tooltip" data-placement="bottom">欧洲</a>
+            </li>
         </ul>
     </nav>
     
     <!--地图数据在 /media/main/js/map-data-china-full.js-->
     <div class="container">
     	<div class="row">      
-        	<div class="span12">  
+        	  <div class="span12">  
                 <div id="map"></div>
                 <script type="text/javascript" src="/media/main/js/map-data-china-full.js"></script>
                 <h4 class="text-right">最后更新时间：2014 年 2 月 </h4>
-            </div>
- 
+     	</div>
  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
             <div class="span12 about">
             	<div class="row">                    
-                    <div class="span6 offset3">
-                    	<h3 class="text-center">To My Dear </h3>
-                    </div>                   
-                </div>
+                           <div class="span6 offset3">
+                    		<h3 class="text-center">To My Dear </h3>
+                           </div>                   
+                	</div>
+              </div>
             </div>
-        </div>
     </div>
-    <div id="page-shadow" class="shadow shadow-main hide"></div>
+
+    <div id="page-shadow" class="shadow shadow-main hide">
+    </div>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->   
 
 <article class="container"> 
 
-
     <!--  写作 Writing: BEGIN-->
-
     <section id="writing" class="row">
    	<div class="span12 panel">
         	<div class="row">
@@ -2353,9 +2393,9 @@ a.thumbnail small {
                 <div class="span4">
                 	<div class="padding-large">
                         <h1>摄影</h1>
-                        <p class="wo">记住美的记忆。</p>
+                        <p class="wo">记住美。</p>
                         
-                        <a href=" " target="_blank" class="btn btn-info btn-large button">浏览我的摄影作品</a>
+                        <a href=" " target="_blank" class="btn btn-info btn-large button">浏览我的相册</a>
                     </div>
                 </div>
 			</div>
@@ -2373,9 +2413,7 @@ a.thumbnail small {
                         <div class="span6">
                             <div class="block-left">
                                 <h1>创造</h1>
-                                <p class="wo">我是一个好奇心极强的人，平时喜欢折腾一些技术活，比如这个网页。</p>
-                                <p class="wo">我什么都不懂。可是我想要学习。这个一种来自自然界的本能。</p>
-                                <br />
+                                <p class="wo">学习是人类存活的本能。</p>
                             </div>	
                         </div>
                         
@@ -2384,6 +2422,11 @@ a.thumbnail small {
                             <div class="design">
                                 <a href="#design" class="btn btn-info btn-large button" data-toggle="modal">设计</a> 
                                 <p class="wo">目前，发现网页设计是编程和设计的一个很好的结合点，所以我现在非常喜欢制作网站。</p> 
+
+                                    <h3>工具</h3>
+                                	 <p class="wo">我的所有工作都是在<emph> Linux Mint Petra </emph>下完成的。虽然这台机子很老，处理速度极慢，不过这反而让我在程序卡顿的间歇多了一些思考的余地。 
+                                	 </p> 
+                                	 
                             </div>
                         </div>
 
@@ -2400,23 +2443,22 @@ a.thumbnail small {
                             <div class="modal-footer">
                                 <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
                             </div>
+
                         </div>
 
                         <!--  编程 Programming  -->
                         <div class="span4">
                             <div class="programming">
                                 <a class="btn btn-info btn-large button">编程</a> 
-                                <p class="wo">如果这个世界可以让机器来为你干活，干嘛不呢。</p>
-
-                                	<h3>工具</h3>
-                                	 <p class="wo">我的所有工作都是在<emph> Linux Mint Petra </emph>下完成的。虽然这台机子很老，处理速度极慢，不过这反而让我在程序卡顿的间歇多了一些思考的余地。 </p>
+                                <p class="wo">如果这个世界可以让机器来为你干活，干嘛不呢。而矛盾的是，这样一份理想的工作就是没有工作。
+                                </p>
 
                                     <h3>语言</h3>
                                       <p class="wo">我习惯使用<emph> R </emph>来处理数据分析，当然，也偶尔折腾一下<emph> Matlab </emph>。我的所有工作都是在<emph> Linux Mint Petra </emph>下完成的。虽然这台机子很老，处理速度极慢，不过这反而让我在程序卡顿的间歇多了一些思考的余地。 </p>
-
-                                <br />
+			
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -2425,14 +2467,11 @@ a.thumbnail small {
                     <div id="showcase" class="carousel slide screenshots">
                         <div class="carousel-inner">
                             <div class="active item">
-                            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                           <img align="center" src="/assets/images/matlab.jpg" class="screenshot-img">
+                            <br /><br /><br /><br />
+                           <img align="center" src="/assets/images/matlab.jpg" class="screenshot-img" height="800" width="400">
                             </div>
                             <div class="item">
-                            <img src="/assets/images/Rlogo.jpg" class="iphone-mockup">
-                            <!--
-                            <img src="" class="iphone-mockup">
-                            -->
+                            <img src="/assets/images/Rlogo.jpg" class="iphone-mockup" height="800" width="400">
                             </div>
                         </div>
                     </div>
@@ -2446,9 +2485,7 @@ a.thumbnail small {
 	
     <section id="about" class="row">
    		<div class="span12 panel relative">
-   			<!--
-        	<img class="ribbon-apple" src="http://bcs.duapp.com/databank/images/ribbon-apple.png">
-        	-->
+
         	<div class="row">
                 <div class="span6" align="center">
                 <br/>
@@ -2460,8 +2497,6 @@ a.thumbnail small {
                     <div class="padding-huge">
                         <h1>关于我</h1>
                         <p class="wo">世界之大，我却如此渺小，小时候没见过啥世面，长大后一直想去更多更远的地方；</p>
-                        <p class="wo">典型的不务正业者，常有奇思妙想；</p>
-                        <p class="wo">估计五年之内也成不了什么事，平庸之人而已；</p>
                         <br />
                         <a href=" " target="_blank" class="btn btn-info btn-large button">点击了解我更多</a>
                         <br>
@@ -2481,13 +2516,11 @@ a.thumbnail small {
                     <div class="padding-large">
                         <h1>联系</h1>
                         <div class="muiti-contact">
-                            <span class="email">
-								<email data-toggle="tooltip" title="Email">williamfang</email><at>@</at><sns data-toggle="tooltip" title="社交网络">gmail</sns><web data-toggle="tooltip" title="个人网站">.com</web>
-								</span>
-                            <!--[if lt IE 9]>
-                            <p class="text-warning">当前浏览器不支持该模块的交互效果，无法动态展示联系方式，建议换用更高级的浏览器。</p>
-                            <p class="text-info">Twitter, Instagram, Path, 新浪微博、腾讯微博和 微信的名称为@imlongluo</p>
-                            <![endif]-->
+                        <span class="email">
+			<a href="mailto: william.lian.fang@gmail.com">
+			<email data-toggle="tooltip" title="G-mail ME!">williamfang</email><at>@</at><sns data-toggle="tooltip" title="社交网络">gmail</sns><web data-toggle="tooltip" title="个人网站">.com</web>
+			</a>
+		</span>
                         </div>
                     </div>
                 </div>
@@ -2515,6 +2548,27 @@ a.thumbnail small {
     </section>
   </article>  
  
+     <script type="text/javascript">
+	$('#page-shadow').click(function(){
+		slideHeader();
+	});
+	
+	$('#link-to-world').hover(function(){
+		$('#link-to-world').tooltip('show');
+	});
+	
+	$('#link-to-china').hover(function(){
+		$('#link-to-china').tooltip('show');
+	});
+	
+	$('#link-to-america').hover(function(){
+		$('#link-to-america').tooltip('show');
+	});
+	
+	$('#link-to-europe').hover(function(){
+		$('#link-to-europe').tooltip('show');
+	});
+	</script>
 </article>
 
 <footer>
@@ -2648,3 +2702,37 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <p style="text-indent: -9999px;"><script src="http://s22.cnzz.com/z_stat.php?id=1000135599&web_id=1000135599" language="JavaScript"></script></p>
 </body>
 </html>
+
+
+
+
+
+
+<!-- 2014.02.21: 图片下标
+<! Index:63
+a:not(.btn) {
+	color: #00699E;
+	/*-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	transition: 300ms;
+	*/
+}
+
+.jumbotron a {
+	color: #fff;
+	color: rgba(255,255,255,.5);
+	/* -webkit-transition: all .5s ease-in-out;
+	   -moz-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			*/
+}
+<! index: 257
+.jumbotron .am-wrapper {
+	box-shadow: 0px 1px 3px 1.5px rgba(0, 0, 0, 0.4);
+	/* opacity: .8; */
+	/*-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			*/
+}
+-->
