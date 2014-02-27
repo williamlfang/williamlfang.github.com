@@ -1,0 +1,103 @@
+#main
+ 	{background: #fff;width: 960px;margin: 0 auto;}
+.sidebar
+ 	{float: right;width: 220px;background: #f6f6f6;position: relative;padding: 20px 15px;
+  }
+.wget
+	{/* border-top: 20px solid #444; */padding: 0 15px;}
+.wget-t
+	{float:left;margin-right: 10px!important;cursor: pointer;color:#ccc}
+.sidebar h3.wget-t 
+	{border-bottom:none!important}
+.active .wget-t
+	{color:#555;}
+.sidebar .active h3.wget-t
+	{color:#555;border-bottom:1px solid #aaa!important}
+.ft_nav li 
+	{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+
+.sidebar h3{border-bottom:1px solid #aaa;margin:20px 0}
+
+@media screen and (max-width: 1079px) {
+     body,#page { width:100%; } #comments textarea {
+width: 90%;}
+	#page,.access{
+    overflow: hidden;
+}
+	.sidebar {width:20%;} #primary { width:75%; }
+	#main{ width: 90%; }
+    #footer{background:none}
+    #access ul.menu,#content{width:auto}
+	#access ul.menu{width:80%;margin:0 auto;float: none;overflow:hidden;height: 100px;}
+	 .logo,.search-form{display:none}
+    .hd {margin:0 auto;width:80%}
+    .hentry{padding:30px 50px ; }
+     .colortag{ right:50px;bottom: -4px;}  
+.sns{margin: 15px  10px;}
+  .snsul td {width: 200px;}
+   .sns#tw { margin: 18px 30px;}
+  .wget-t {margin-right: 5%!important;}
+  .entry-meta{ 
+width: 50px;
+height: 50px;  
+ left:-25px;top:45px ;
+background: #555;
+text-align: center;
+}
+ 
+
+ @media screen and (max-width: 880px) {
+     #primary { width:100%; } 
+	.sidebar {display: none;}
+	#main{ width: 90%; }
+    #footer{background:none}
+    
+	#access ul.menu{width:80%;margin:0 auto;float: none;overflow:hidden;height: 100px;}
+ 
+    .hd {margin:0 auto;width:80%}
+   
+     .colortag{ right:50px}
+   
+}
+
+.error404 #main
+ 	{background: #555; color:#fff}
+.e404content{font-size:100px;text-align:center;font-family:'Poiret One';font-weight:700} 
+.error404 .sidebar
+ 	{background: #fff; color:#888}
+.error404 .sidebar a,.error404 .entry-tags span ,.error404 .sidebar h3
+ 	{  color:#555}
+
+
+
+
+ .snsul td 
+  {
+width: 65px;
+padding: 0;
+}
+.snsul {
+border-bottom: 1px solid #aaa;
+margin: 20px 0;
+}
+.sns
+  {
+background: url(http://img.xiaohudie.net/sns22.png);
+width: 25px;
+height: 22px;
+display: inline-block;
+margin: 15px 15px;
+cursor: pointer;
+margin-right: 0;
+}.sns#wb {
+background-position: 0px 1px;
+left: 50px;
+}.sns#wx {
+background-position: 25px 23px;
+left: 100px;
+}.sns#tw {
+background-position: 0px 24px;
+margin: 18px 15px;
+} 
+
