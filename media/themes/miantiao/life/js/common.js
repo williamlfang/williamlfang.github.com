@@ -130,7 +130,7 @@ $("#rocket").click(function () {
 	
 $(document).ready(function() {
 $('.title').click(function(){
-    $(this).text('给力载入中……');
+    $(this).text('给力载入中……'); /*给力载入中……给力载入中……给力载入中……给力载入中……给力载入中……给力载入中……给力载入中……给力载入中……给力载入中……*/
     window.location = $(this).attr('href');
     });
 });

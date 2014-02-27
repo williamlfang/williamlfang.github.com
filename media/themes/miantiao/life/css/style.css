@@ -1,3 +1,11 @@
+
+
+.post h2{font-size:20px; padding:12px;color:#222;line-height:1.2;border-left:6px solid;border-radius:2px;
+		-moz-border-radius:2px;-webkit-border-radius:2px;-o-border-radius:2px;
+		background-color:#ffbba3;border-color:#ff6f3d;color:#ff5c23;
+		margin-top:12px;margin-bottom:15px;
+		}
+
 body {
 	background: url(../images/bg.png) repeat;
 	cursor: url('../images/a.cur'),auto;
@@ -156,7 +164,7 @@ input#search {
 .info {
 	position:absolute;
 	left:-78px;  /*===================== 68 -78 =======================*/
-	top:0;
+	top:-15px;
 	text-align:center;
 }
 .info span,.info a {
@@ -467,7 +475,7 @@ input#search {
 	visibility: hidden;
 	width: 26px;
 	height: 48px;
-	background: url(../images/rocket.png) no-repeat 50% 0;
+	background: url("/assets/images/rocket.png") no-repeat 50% 0;
 	opacity: 0;
 	-webkit-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 	-moz-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
@@ -478,7 +486,7 @@ input#search {
 	display: block;
 	margin-top: 48px;
 	height: 14px;
-	background: url(../images/rocket.png) no-repeat 50% -48px;
+	background: url("/assets/images/rocket.png") no-repeat 50% -48px;
 	opacity: .5;
 	-webkit-transition: -webkit-transform .2s;
 	-moz-transition: -moz-transform .2s;
