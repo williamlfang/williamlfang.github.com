@@ -1,3 +1,11 @@
+
+
+.post h2{font-size:20px; padding:12px;color:#222;line-height:1.2;border-left:6px solid;border-radius:2px;
+		-moz-border-radius:2px;-webkit-border-radius:2px;-o-border-radius:2px;
+		background-color:#ffbba3;border-color:#ff6f3d;color:#ff5c23;
+		margin-top:12px;margin-bottom:15px;
+		}
+
 body {
 	background: url(../images/bg.png) repeat;
 	cursor: url('../images/a.cur'),auto;
@@ -14,13 +22,26 @@ object,embed,iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* curse quote  --------------------------------------------------------------- */
+blockquote {
+  background:transparent url("/media/themes/miantiao/life/images/blockquote_bg.gif") no-repeat scroll left top; 
+  color: #000000; 
+  font-style: italic; 
+  font-size:14px;
+  margin: 0 0 1em; 
+  min-height: 1.5em; 
+  overflow: auto;
+  padding: 30px 10px 13px 18px;
+}
+/*
 blockquote {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-o-border-radius: 5px;
 	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpiYGBgcABihv///zPgYcOBAyE25QqGrHUAAQYAP/8PuB+VLEEAAAAASUVORK5CYII=');
-}
+}*/
 #head {
 	height:260px;
 }
@@ -142,8 +163,8 @@ input#search {
 }
 .info {
 	position:absolute;
-	left:-68px;
-	top:0;
+	left:-78px;  /*===================== 68 -78 =======================*/
+	top:-15px;
 	text-align:center;
 }
 .info span,.info a {
@@ -154,29 +175,37 @@ input#search {
 }
 .date {
 	position:relative;
-	width:60px;
-	height:60px;
+	width:80px;     /*===================== 60 -80 =======================*/         
+	height:80px;
 	zoom:1;
 	background: #ff6f3d;
 	-webkit-border-radius:50%;
 	-moz-border-radius:50%;
 	border-radius:50%;
 }
+.year {
+	font-size:2px;
+	padding:12px 0 0px 0px;
+}
+
 .day {
-	font-size:20px;
-	padding:11px 0 0;
+	font-size:30px;
+	font-weight: bolder;
+	font-family: Poiret One;
+	padding:0px 0 0 0px;
 }
 .month {
-	padding:4px 0 0 0;
+	font-size:2px;
+	padding:0px 0  0  0px;
 }
 .circle {
 	position:absolute;
-	left:5px;
-	top:5px;
-	width:50px;
-	height:50px;
-	border:2px solid #fff;
-	opacity:0;
+	left:5px; /*===================== 5 -8 =======================*/
+	top:5px;/*===================== 5 -8 =======================*/
+	width:70px;/*===================== 50 -65 =======================*/
+	height:70px;/*===================== 50 -65 =======================*/
+	border:4px solid #fff;
+	opacity:0.6;
 	visibility:hidden;
 }
 .circle {
@@ -446,7 +475,7 @@ input#search {
 	visibility: hidden;
 	width: 26px;
 	height: 48px;
-	background: url(../images/rocket.png) no-repeat 50% 0;
+	background: url("/assets/images/rocket.png") no-repeat 50% 0;
 	opacity: 0;
 	-webkit-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 	-moz-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
@@ -457,7 +486,7 @@ input#search {
 	display: block;
 	margin-top: 48px;
 	height: 14px;
-	background: url(../images/rocket.png) no-repeat 50% -48px;
+	background: url("/assets/images/rocket.png") no-repeat 50% -48px;
 	opacity: .5;
 	-webkit-transition: -webkit-transform .2s;
 	-moz-transition: -moz-transform .2s;
