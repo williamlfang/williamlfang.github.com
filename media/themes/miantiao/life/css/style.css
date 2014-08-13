@@ -28,7 +28,9 @@ object,embed,iframe {
 
 /* curse quote  --------------------------------------------------------------- */
 blockquote {
+  /*
   background:transparent url("/media/themes/miantiao/life/images/blockquote_bg.gif") no-repeat scroll left top; 
+  */
   /*color: #000000; 
   */
   color: #10BBC6;
