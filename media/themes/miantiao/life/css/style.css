@@ -268,12 +268,14 @@ input#search {
 }
 .content img {
 	border-radius:10px;
-	width: 750px;
-    height: 400px;
+	/*width: 750px;
+  height: 400px;
     /*
 	max-width:550px;
 	width:expression(document.body.clientWidth>550?"550px":"auto");
 	*/
+  max-width:750px;
+  width:expression(document.body.clientWidth>750?"750px":"auto");
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
