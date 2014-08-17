@@ -274,8 +274,8 @@ input#search {
 	max-width:550px;
 	width:expression(document.body.clientWidth>550?"550px":"auto");
 	*/
-  max-width:750px;
-  width:expression(document.body.clientWidth>750?"750px":"auto");
+  max-width:650px;
+  width:expression(document.body.clientWidth>650?"650px":"auto");
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
